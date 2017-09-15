@@ -1,116 +1,76 @@
 [[$header]]
 <div class="img-contacts-page" style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 big-page-img" id="img-contacts-page">
-
-
-
-            </div>
-        </div>
-        <!-- row-->
-    </div>
-    <!--container-->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 big-page-img" id="img-contacts-page"></div>
+		</div>
+	</div>
 </div>
 
 <div class="container content">
-    <article class="row contacts-page">
+	<article class="row contacts-page">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1>[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1>
+		</div>
+		[[breadcrumb? &containerTpl=`breadcrumb-container` ]]
+		<div class="col-lg-5">
+			<h4>[[++cultureKey:is=`ru`:then=`Адрес`]][[++cultureKey:is=`en`:then=`Adress`]][[++cultureKey:is=`uz`:then=`МАНЗИЛ`]]</h4> [[*contacts-adress]]
+			<div class="row mt-30">
+				<div class="col-lg-6 col-xs-6 contacts-telephones">
+					<h4>[[++cultureKey:is=`ru`:then=`Телефоны`]][[++cultureKey:is=`en`:then=`Phones`]][[++cultureKey:is=`uz`:then=`ТЕЛЕФОНЛАР`]]</h4> [[*contacts-tel]]
+				</div>
+				<div class="col-lg-6 col-xs-6">
+					<h4>[[++cultureKey:is=`ru`:then=`Социальные сети`]][[++cultureKey:is=`en`:then=`Socials`]][[++cultureKey:is=`uz`:then=`ИЖТИМОИЙ ТАРМОҚЛАР`]]</h4>
+					<ul class="inline social-icons">
+						<li>
+							<a href="[[*contacts-facebook]]" data-original-title="Facebook" class="social_facebook rounded-x" rel="nofollow" target="_blank"></a>
+						</li>
+						<li>
+							<a href="[[*contacts-instagram]]" data-original-title="Instagram" class="social_instagram rounded-x" rel="nofollow" target="_blank"></a>
+						</li>
+					</ul>
+					<h4 class="mt-10">E-mail:</h4>
+					<a href="mailto:info@estimed.uz">info@estimed.uz</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-7 contacts-form" id="contacts-form">
+			<form action="assets/plugins/sky-forms-pro/skyforms/contacts.php" class="sky-form" method="post" id="sky-form3" novalidate="novalidate">
+				<fieldset>
+					<div class="row mt-30">
+						<div class="col-md-5">
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformName" placeholder="[[++cultureKey:is=`ru`:then=`Имя *`]][[++cultureKey:is=`en`:then=`Your Name`]][[++cultureKey:is=`uz`:then=`Исми *`]]" name="name">
+								<span class="text-warning small"></span>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformEmail" placeholder="[[++cultureKey:is=`ru`:then=`Е-мейл *`]][[++cultureKey:is=`en`:then=`Email`]][[++cultureKey:is=`uz`:then=`Е-мейл *`]]" name="email">
+								<small class="text-warning"></small>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformTel" placeholder="[[++cultureKey:is=`ru`:then=`Телефон`]][[++cultureKey:is=`en`:then=`Telephone`]][[++cultureKey:is=`uz`:then=`Телефон`]]" name="tel">
+								<small class="text-warning"></small>
+							</div>
+							<div class="form-group">
+								<input type="checkbox" name="robot">[[++cultureKey:is=`ru`:then=`Я не робот`]][[++cultureKey:is=`en`:then=`I`m not a robot`]][[++cultureKey:is=`uz`:then=`Мен робот эмасман`]]
+							</div>
+						</div>
+						<div class="col-md-7">
+							<textarea class="form-control" id="fformMessage" placeholder="[[++cultureKey:is=`ru`:then=`Ваше сообщение *`]][[++cultureKey:is=`en`:then=`Your message`]][[++cultureKey:is=`uz`:then=`Савол / хат *`]]" name="message"></textarea>
+							<small class="text-warning"></small>
+							<button type="submit" class="btn btn-default mt-40">[[++cultureKey:is=`ru`:then=`Отправить`]][[++cultureKey:is=`en`:then=`Send`]][[++cultureKey:is=`uz`:then=`Йуборищ`]]</button>
+						</div>
+					</div>
+				</fieldset>
 
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
-            </h1>
-        </div>
-        [[breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-        <div class="col-lg-5">
-
-            <h4>Адрес</h4> [[*contacts-adress]]
-
-            <div class="row mt-30">
-
-                <div class="col-lg-6 col-xs-6 contacts-telephones">
-                    <h4>телефоны</h4> [[*contacts-tel]]
-
-                </div>
-
-                <div class="col-lg-6 col-xs-6">
-                    <h4>Социальные сети</h4>
-                    <ul class="inline social-icons">
-                        <li>
-                            <a href="[[*contacts-facebook]]" data-original-title="Facebook" class="social_facebook rounded-x" rel="nofollow" target="_blank"></a>
-                        </li>
-                        <li>
-                            <a href="[[*contacts-instagram]]" data-original-title="Instagram" class="social_instagram rounded-x" rel="nofollow" target="_blank"></a>
-                        </li>
-                    </ul>
-                    <!-- social-icons-->
-                    <h4 class="mt-10">E-mail:</h4>
-                    <a href="mailto:info@estimed.uz">info@estimed.uz</a>
-                </div>
-            </div>
-            <!-- row-->
-        </div>
-
-
-        <div class="col-lg-7 contacts-form" id="contacts-form">
-
-            <form action="assets/plugins/sky-forms-pro/skyforms/contacts.php" class="sky-form" method="post" id="sky-form3" novalidate="novalidate">
-
-                <fieldset>
-                    <div class="row mt-30">
-
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="fformName" placeholder="Имя" name="name" value="">
-                                <span class="text-warning small"></span>
-
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="fformSurName" placeholder="E-mail" name="email" value="">
-                                <small class="text-warning"></small>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="fformTel" placeholder="Телефон" name="tel" value="">
-                                <small class="text-warning"></small>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input type="checkbox" name="robot"> Я не робот
-                            </div>
-
-
-
-
-                        </div>
-                        <div class="col-md-7">
-                            <textarea class="form-control" id="fformMessage" placeholder="Вопрос / сообщение" name="message"></textarea>
-
-                            <small class="text-warning"></small>
-
-                            <button class="btn btn-default mt-15" type="submit">Отправить</button>
-                        </div>
-
-                    </div>
-
-                </fieldset>
-
-                <!-- Success Message -->
-                <div class="message">
-                    <i class="rounded-x fa fa-check"></i>
-                    <p>Сообщение успешно отправлено!</p>
-                </div>
-            </form>
-
-
-        </div>
-    </article>
-    <!-- article-->
-
+				<div class="message">
+					<i class="rounded-x fa fa-check"></i>
+					<p>[[++cultureKey:is=`ru`:then=`Ваш отзыв успешно отправлен! Спасибо.`]][[++cultureKey:is=`en`:then=`Success! Thank you!`]][[++cultureKey:is=`uz`:then=`Перевод: Ваш отзыв успешно отправлен! Спасибо.`]]</p>
+				</div>
+			</form>
+		</div>
+	</article>
 </div>
-<!--container-->
 
 <div id="map" class="contacts-map mt-60"></div>
-
 [[$footer]]
