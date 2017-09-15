@@ -1,86 +1,59 @@
-
-  [[*id:isnot=`5`:then=`
-  
-   <div class="container footer-map">
-    <div class="row">
-        
-        <div class="col-md-8 mb-30 mt-30">
-            <div id="map">
-                
-            </div>
-        </div>
-        
-        <div class="col-md-4 mb-30 mt-30 text-right">
-            <h4 class="mb-10"><img class="logo" src="assets/img/logo.png" alt="Клиника Эстимед" class="" width="150px"></h4>
-            
-            +99871 271 23 07, 
-            +99890 347 98 34, 
-            +99897 131 23 01 <br>
-             г.Ташкент 100115, Чиланзар 3-квартал, ул. Чиланзарская, 43/1 <br>
-       
-       <a href="[[~5]]#contacts-form" class="mt-20 btn btn-warning text-uppercase">Отправить сообщение</a>
-       
-        </div>
-         
-    </div>
-<!-- row-->
+[[*id:isnot=`[[++cultureKey:is=`ru`:then=`5`]][[++cultureKey:is=`en`:then=`370`]][[++cultureKey:is=`uz`:then=`523`]]`:then=`
+<div class="container footer-map">
+	<div class="row">
+		<div class="col-md-8 mb-30 mt-30">
+			<div id="map"></div>
+		</div>
+		<div class="col-md-4 mb-30 mt-30 text-right">
+			<h4 class="mb-10"><img class="logo" src="assets/img/logo.png" alt="Клиника Эстимед" class="" width="150px"></h4>
+			[[++cultureKey:is=`ru`:then=`
+			+99871 271 23 07, +99890 347 98 34, +99897 131 23 01 <br> г.Ташкент 100115, Чиланзар 3-квартал, ул. Чиланзарская, 43/1 <br>
+			<a href="[[~5]]#contacts-form" class="mt-20 btn btn-warning text-uppercase">Отправить сообщение</a>
+			`]][[++cultureKey:is=`en`:then=`
+			+99871 271 23 07, +99890 347 98 34, +99897 131 23 01 <br> Tashkent 100115, Chilanzar 3-quarter, st. Chilanzar, 43/1. <br>
+			<a href="[[~370]]#contacts-form" class="mt-20 btn btn-warning text-uppercase">Send Feedback</a>
+			`]][[++cultureKey:is=`uz`:then=`
+			+99871 271 23 07, +99890 347 98 34, +99897 131 23 01 <br> Тошкент ш. 100115, Чиланзор 3-квартал, Чиланзор кўчаси, 43/1. <br>
+			<a href="[[~523]]#contacts-form" class="mt-20 btn btn-warning text-uppercase">Алока</a>
+			`]]
+		</div>
+	</div>
 </div>
-<!-- container-->
-   
 `]]
 
-
-
 <footer>
-    <!-- Navbar -->
-    <div class="navbar navbar-default mega-menu" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-nav">
-                    <span class="sr-only">Развернуть</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse navbar-responsive-collapse" id="footer-nav">
-
-                [[Wayfinder? &startId=`0` &level=`1` &outerClass=`nav navbar-nav pull-righ` &hereClass=`active` ]]
-
-            </div>
-            <!--/navbar-collapse-->
-
-            <div class="social-icons">
-                <ul class="social-icons text-center">
-
-                    <li>
-                        <a href="http://fb.com/estimed" data-original-title="Facebook" class="social_facebook rounded-x" rel="nofollow" target="_blank"></a>
-                    </li>
-
-                    <li>
-                        <a href="http://instagram.com/estimed_clinic/" data-original-title="Instagram" class="social_instagram rounded-x" rel="nofollow" target="_blank"></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="text text-center pb-20">© EstiMED 2004 - [[!year]]</div>
-
-            <div class="developer"><a class="developer__link" href="https://urazaev.com" target="_blank">Разработка и поддержка сайта</a></div>
-        </div>
-    </div>
+	<div class="navbar navbar-default mega-menu" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-nav">
+          <span class="sr-only">Развернуть</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+		    </button>
+			</div>
+			<div class="collapse navbar-collapse navbar-responsive-collapse" id="footer-nav">
+				[[Wayfinder? &startId=`0` &level=`1` &outerClass=`nav navbar-nav pull-righ` &hereClass=`active` ]]
+			</div>
+			<div class="social-icons">
+				<ul class="social-icons text-center">
+					<li><a href="http://fb.com/estimed" data-original-title="Facebook" class="social_facebook rounded-x" rel="nofollow" target="_blank"></a></li>
+					<li><a href="http://instagram.com/estimed_clinic/" data-original-title="Instagram" class="social_instagram rounded-x" rel="nofollow" target="_blank"></a></li>
+				</ul>
+			</div>
+			<div class="text text-center pb-20">© EstiMED 2004 - [[!year]]</div>
+			<div class="developer"><a class="developer__link" href="https://urazaev.com" target="_blank">[[++cultureKey:is=`ru`:then=`Разработка и поддержка сайта`]][[++cultureKey:is=`en`:then=`Site development and support`]][[++cultureKey:is=`uz`:then=`Сайт яратиш`]]</a></div>
+		</div>
+	</div>
 </footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-
 <script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="/assets/js/plugins/owl-carousel.js"></script>
-
 <script type="text/javascript" src="/assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/cube-portfolio/templates/lightbox-gallery/js/main.js"></script>
-
-
 <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
 <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
 <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
@@ -94,26 +67,15 @@
 <script type="text/javascript" src="/assets/js/faq.js"></script>
 `]]
 
-
-
-
 <script type="text/javascript" src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
-
 <script type="text/javascript" src="/assets/js/plugins/fancy-box.js"></script>
 <script type="text/javascript" src="/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
-
-
-<!--<script type="text/javascript" src="/assets/plugins/jquery.parallax.js"></script>-->
-
 <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&amp;callback=initMap" async defer></script>
 <script src="/assets/js/plugins/gmaps-ini.js"></script>
-
 <script type="text/javascript" src="/assets/js/app.js"></script>
 
 <script type="text/javascript">
     jQuery(document).ready(function () {
-
-
         
      [[*id:is=`1`:then=`  
 //        App.initParallaxBg();
@@ -140,9 +102,6 @@
         
     });
 </script>
-
 [[$counters]]
-
 </body>
-
 </html>
