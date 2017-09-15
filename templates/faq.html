@@ -1,168 +1,89 @@
 [[$header]]
-<div class="img-faq-page"  style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 big-page-img " id="img-faq-page">
-
-
-
-            </div>
-        </div>
-    </div>
+<div class="img-faq-page" style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 big-page-img " id="img-faq-page"></div>
+		</div>
+	</div>
 </div>
 <div class="container content">
-    <article class="row faq-page">
+	<article class="row faq-page">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1 class="">
+				[[!*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
+			</h1>
+		</div>
+		[[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
+		<div class="col-lg-12">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				[[getPage? &elementClass=`modSnippet` &element=`getResources` &tplFirst=`@INLINE &nbsp;
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading[[+id]]">
+						<div class="fa fa-question-circle gold-color"></div>&nbsp;
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a>
+						</h4>
+					</div>
+					<div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
+						<div class="panel-body">
+							<i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>[[++cultureKey:is=`ru`:then=`Ответ:`]][[++cultureKey:is=`en`:then=`Question:`]][[++cultureKey:is=`uz`:then=`Перевод: Ответ:`]]</strong> [[+content]]
+						</div>
+					</div>
+				</div>
+				` &tpl=`@INLINE &nbsp;
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading[[+id]]">
+						<div class="fa fa-question-circle gold-color"></div>&nbsp;
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a>
+						</h4>
+					</div>
+					<div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
+						<div class="panel-body">
+							<i class="fa fa-quote-left gold-color"></i>&nbsp;
+							<strong>[[++cultureKey:is=`ru`:then=`Ответ:`]][[++cultureKey:is=`en`:then=`Question:`]][[++cultureKey:is=`uz`:then=`Перевод: Ответ:`]]</strong> [[+content]]
+						</div>
+					</div>
+				</div>
+				` &limit=`10` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]` &sortby=`menuindex` &sortdir=`ASC` ]]
+			</div>
+			[[!+page.nav:notempty=` [[!+page.nav]] `]] [[*content]]
+		</div>
+		<div class="col-lg-12 form-red">
+			<h2>Отправить свой вопрос</h2>
+			<form action="assets/plugins/sky-forms-pro/skyforms/faq.php" class="sky-form" method="post" id="FaqForm" novalidate="novalidate">
+				<fieldset>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformName" placeholder="[[++cultureKey:is=`ru`:then=`Имя *`]][[++cultureKey:is=`en`:then=`Your Name`]][[++cultureKey:is=`uz`:then=`Перевод: Имя *`]]" name="name">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformEmail" placeholder="[[++cultureKey:is=`ru`:then=`Е-мейл *`]][[++cultureKey:is=`en`:then=`Email`]][[++cultureKey:is=`uz`:then=`Перевод: Е-мейл *`]]" name="email">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformEmail" placeholder="[[++cultureKey:is=`ru`:then=`Телефон`]][[++cultureKey:is=`en`:then=`Telephone`]][[++cultureKey:is=`uz`:then=`Перевод: Телефон`]]" name="tel">
+							</div>
+							<div class="form-group input-captcha">
+								<input type="checkbox" name="robot"> [[++cultureKey:is=`ru`:then=`Я не робот`]][[++cultureKey:is=`en`:then=`I`m not a robot`]][[++cultureKey:is=`uz`:then=`Перевод: Я не робот`]]
+							</div>
+						</div>
+						<div class="col-md-9">
+							<textarea class="form-control" id="fformMessage" placeholder="[[++cultureKey:is=`ru`:then=`Ваш отзыв *`]][[++cultureKey:is=`en`:then=`Your message`]][[++cultureKey:is=`uz`:then=`Перевод: Ваш отзыв *`]]" name="message"></textarea>
+						</div>
+					</div>
+					<div class="text-center">
+						<button type="submit" class="btn btn-default mt-40">[[++cultureKey:is=`ru`:then=`Отправить`]][[++cultureKey:is=`en`:then=`Send`]][[++cultureKey:is=`uz`:then=`Перевод: Отправить`]]</button>
+					</div>
+				</fieldset>
 
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[!*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
-            </h1>
-        </div>
-        [[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-
-        <div class="col-lg-12">
-
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-
-                [[getPage? &elementClass=`modSnippet` &element=`getResources` &tplFirst=`@INLINE &nbsp;
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="heading[[+id]]">
-                        <div class="fa fa-question-circle gold-color"></div>&nbsp;
-                        <h4 class="panel-title">
-                                 
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
- [[+pagetitle]]
-                                </a>
-                              </h4>
-                    </div>
-
-                    <div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
-                        <div class="panel-body">
-                            <i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>Ответ:</strong> [[+content]]
-                        </div>
-                    </div>
-
-                </div>
-                <!-- panel panel-default-->
-
-
-                ` &tpl=`@INLINE &nbsp;
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="heading[[+id]]">
-                        <div class="fa fa-question-circle gold-color"></div>&nbsp;
-                        <h4 class="panel-title">
-                                 
-
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
-                                  [[+pagetitle]]
-                                </a>
-                              </h4>
-                    </div>
-
-                    <div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
-                        <div class="panel-body">
-                            <i class="fa fa-quote-left gold-color"></i>&nbsp;
-                            <strong>Ответ:</strong> [[+content]]
-                        </div>
-                    </div>
-
-                </div>
-                <!-- panel panel-default-->
-
-
-                ` &limit=`10` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`3` &sortby=`menuindex` &sortdir=`ASC` ]]
-
-
-
-
-
-            </div>
-            <!-- panel-group-->
-
-
-
-
-
-            [[!+page.nav:notempty=` [[!+page.nav]] `]] [[*content]]
-
-
-
-
-        </div>
-        <!--col-lg-12-->
-
-
-
-
-        <div class="col-lg-12 form-red">
-            <h2>Отправить свой вопрос</h2>
-            <form action="assets/plugins/sky-forms-pro/skyforms/faq.php" class="sky-form" method="post" id="FaqForm" novalidate="novalidate">
-
-                <fieldset>
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="fformName" placeholder="Имя *" name="name">
-
-                            </div>
-                            <div class="form-group">
-
-                                <input type="text" class="form-control" id="fformEmail" placeholder="Е-мейл *" name="email">
-
-                            </div>
-                            <div class="form-group">
-
-                                <input type="text" class="form-control" id="fformEmail" placeholder="Телефон" name="tel">
-
-                            </div>
-
-                            <div class="form-group input-captcha">
-
-                                <input type="checkbox" name="robot"> Я не робот
-
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-9">
-                            <textarea class="form-control" id="fformMessage" placeholder="Ваш вопрос *" name="message"></textarea>
-
-
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-default mt-40">Отправить</button>
-                    </div>
-
-
-                </fieldset>
-                <!-- Success Message -->
-                <div class="message">
-                    <i class="rounded-x fa fa-check"></i>
-                    <p>Ваш вопрос успешно отправлен! Спасибо.</p>
-                </div>
-
-        </div>
-        <!--col-lg-12-->
-
-
-
-
-
-
-        </form>
+				<div class="message">
+					<i class="rounded-x fa fa-check"></i>
+					<p>[[++cultureKey:is=`ru`:then=`Ваш отзыв успешно отправлен! Спасибо.`]][[++cultureKey:is=`en`:then=`Success! Thank you!`]][[++cultureKey:is=`uz`:then=`Перевод: Ваш отзыв успешно отправлен! Спасибо.`]]</p>
+				</div>
+			</form>
+		</div>
+	</article>
 </div>
-
-</article>
-<!-- article-->
-
-</div>
-<!--container-->
 
 [[$footer]]

@@ -1,138 +1,68 @@
 [[$header]]
 <div class="img-responses-page" style="background: url([[*global-big-picture]]) no-repeat; background-position: top center; background-size: cover;">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 big-page-img" id="img-responses-page">
-            
-            
-            
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 big-page-img" id="img-responses-page"></div>
+		</div>
+	</div>
 </div>
-</div>
-
 <div class="container content">
-    <article class="row responses-page">
+	<article class="row responses-page">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1>[[!*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1>
+		</div>
+		[[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
+		<div class="text-right">
+			<a type="submit" class="btn btn-default mt-10" href="[[~[[*id]]]]#RespForm">[[++cultureKey:is=`ru`:then=`Добавить отзыв`]][[++cultureKey:is=`en`:then=`Add testimonial`]][[++cultureKey:is=`uz`:then=`Перевод: Добавить отзыв`]]</a>
+		</div>
+		[[getPage? &elementClass=`modSnippet` &element=`getResources` &tpl=`@INLINE &nbsp;
+		<div class="col-md-12 response-outer">
+			<div class="row" id="[[+id]]">
+				<div class="col-md-2 col-xs-2 col-sm-2">
+					<img src="[[++tv.pic-responses:isnotempty=`/[[+tv.pic-responses]]`]][[+tv.pic-responses:isempty=`/assets/img/avatar-female-2.png`]]" alt="[[+pagetitle]]" class="img-circle img-responsive" />
+				</div>
+				<div class="col-md-10 col-xs-10 col-sm-10 peoples-description">
+					<h3 class="pb-20 pt-10">[[+pagetitle]]</h3>
+						[[+content]]
+				</div>
+				<div class="col-md-12">
+					<hr class="response-container">
+				</div>
+			</div>
+		</div>
+` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]` &sortby=`menuindex` &sortdir=`ASC` ]] 
+	[[!+page.nav:notempty=` [[!+page.nav]] `]]
+		<div class="col-lg-12 form-red">
+			<h2>[[++cultureKey:is=`ru`:then=`Отправить свой отзыв`]][[++cultureKey:is=`en`:then=`Send your testimonial`]][[++cultureKey:is=`uz`:then=`Перевод: Отправить свой отзыв`]]</h2>
+			<form action="assets/plugins/sky-forms-pro/skyforms/resp.php" class="sky-form" method="post" id="RespForm" novalidate="novalidate">
+				<fieldset>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformName" placeholder="[[++cultureKey:is=`ru`:then=`Имя *`]][[++cultureKey:is=`en`:then=`Your Name`]][[++cultureKey:is=`uz`:then=`Перевод: Имя *`]]" name="name">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="fformEmail" placeholder="[[++cultureKey:is=`ru`:then=`Е-мейл *`]][[++cultureKey:is=`en`:then=`Email`]][[++cultureKey:is=`uz`:then=`Перевод: Е-мейл *`]]" name="email">
+							</div>
+							<div class="form-group input-captcha">
+								<input type="checkbox" name="robot">[[++cultureKey:is=`ru`:then=`Я не робот`]][[++cultureKey:is=`en`:then=`I`m not a robot`]][[++cultureKey:is=`uz`:then=`Перевод: Я не робот`]]
+							</div>
+						</div>
+						<div class="col-md-9">
+							<textarea class="form-control" id="fformMessage" placeholder="[[++cultureKey:is=`ru`:then=`Ваш отзыв *`]][[++cultureKey:is=`en`:then=`Your message`]][[++cultureKey:is=`uz`:then=`Перевод: Ваш отзыв *`]]" name="message"></textarea>
+						</div>
+					</div>
+					<div class="text-center">
+						<button type="submit" class="btn btn-default mt-40">[[++cultureKey:is=`ru`:then=`Отправить`]][[++cultureKey:is=`en`:then=`Send`]][[++cultureKey:is=`uz`:then=`Перевод: Отправить`]]</button>
+					</div>
+				</fieldset>
 
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[!*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
-            </h1>
-        </div>
-
-
-
-
-        [[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-
-        
-                <div class="text-right">
-                    <a type="submit" class="btn btn-default mt-10" href="[[~[[*id]]]]#RespForm">Добавить отзыв</a>
-                </div>
- 
-
-              
-			[[getPage?
-					&elementClass=`modSnippet`
-					&element=`getResources` 
-					&tpl=`@INLINE <div class="col-md-12 response-outer">
-            <div class="row" id="[[+id]]">
-                <div class="col-md-2 col-xs-2 col-sm-2">
-                  
-                        <img src="[[++tv.pic-responses:isnotempty=`/[[+tv.pic-responses]]`]][[+tv.pic-responses:isempty=`/assets/img/avatar-female-2.png`]]" alt="[[+pagetitle]]" class="img-circle img-responsive" />
-                        
-                        
-                        
-                   
-                </div>
-                <!-- col-md-2-->
-
-                <div class="col-md-10 col-xs-10 col-sm-10 peoples-description">
-                    <h3 class="pb-20 pt-10">[[+pagetitle]]</h3>
-
-                    <p class="descrption">
-                       [[+content]]
-
-                </div>
-                <!--peoples-description-->
-                <div class="col-md-12">
-                    <hr class="response-container">
-                </div>
-            </div>
-            <!-- row-->
-
-        </div>
-        <!-- response-outer-->`
-					&limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]`  &sortby=`menuindex` &sortdir=`ASC` 
-				]]
-
-  
-
-
-[[!+page.nav:notempty=`
-
-    [[!+page.nav]]
-
- 
-
-`]]  
-        
-
-
-        <div class="col-lg-12 form-red">
-            <h2>Отправить свой отзыв</h2>
-          <form action="assets/plugins/sky-forms-pro/skyforms/resp.php" class="sky-form" method="post" id="RespForm" novalidate="novalidate">
-               
-               <fieldset>
-                <div class="row">
-
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="fformName" placeholder="Имя *" name="name" >
-
-                        </div>
-                        <div class="form-group">
-
-                            <input type="text" class="form-control" id="fformEmail" placeholder="Е-мейл *" name="email">
-
-                        </div>
-                        
-                            <div class="form-group input-captcha">
-
-                                <input type="checkbox" name="robot"> Я не робот
-
-
-                            </div>
-                    </div>
-
-
-                    <div class="col-md-9">
-                        <textarea class="form-control" id="fformMessage" placeholder="Ваш отзыв *" name="message"></textarea>
-
-
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <button type="submit" class="btn btn-default mt-40">Отправить</button>
-                </div>
-
-        
-        </fieldset>
-                    <!-- Success Message -->
-                    <div class="message">
-                        <i class="rounded-x fa fa-check"></i>
-                        <p>Ваш отзыв успешно отправлен! Спасибо.</p>
-                    </div>
-
-        </div>
-        <!--col-lg-12-->
- 
-    </article>
-    <!-- article-->
-
+				<div class="message">
+					<i class="rounded-x fa fa-check"></i>
+					<p>[[++cultureKey:is=`ru`:then=`Ваш отзыв успешно отправлен! Спасибо.`]][[++cultureKey:is=`en`:then=`Success! Thank you!`]][[++cultureKey:is=`uz`:then=`Перевод: Ваш отзыв успешно отправлен! Спасибо.`]]</p>
+				</div>
+		</div>
+	</article>
 </div>
-<!--container-->
 
 [[$footer]]
