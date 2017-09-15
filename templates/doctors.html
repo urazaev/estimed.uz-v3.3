@@ -1,159 +1,83 @@
 [[$header]] [[*isfolder:is==`0`:then=`
-
-
 <div class="container content">
-    <article class="row doctors-page-open">
-
-
-        [[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-
-
-        <!-- контент докторов-->
-
-
-        <div class="col-lg-2 col-xs-4 doctor-photo text-left pt-20">
-
-
-
-            <a class="fancybox-button zoomer" data-rel="fancybox-button" href="[[*pic-doctor]]">
-                <span class="overlay-zoom">  
-                            <img alt="" src="[[*pic-doctor:phpthumbof=`w=250&h=250&zc=1`]]" class="five-imgs img-responsive">
-                            <span class="zoom-icon"></span>
-                </span>
-            </a>
-
-
-
-
-            <div class="contacts-icons pt-20 pb-10">
-                [[*doctors-mail:isnotempty=`
-                <p><i class="fa fa-envelope-o"></i><a href="[[*doctors-mail]]">[[*doctors-mail]]</a>
-                </p>`]] 
-                
-                [[*doctors-tel:isnotempty=`
-                <p><i class="fa fa-phone"></i> [[*doctors-tel]]</p>`]]
-            </div>
-            <!--contacts-icons-->
-
-            <hr>
-
-            <div class="text-center">
-                <ul class="inline social-icons pt-20">
-                    [[*doctors-facebook:isnotempty=`
-                    <li>
-                        <a href="[[*doctors-facebook]]" data-original-title="Facebook" class="social_facebook" rel="nofollow" target="_blank"></a>
-                    </li>
-                    `]] 
-                    
-                    [[*doctors-instagram:isnotempty=`
-                    <li>
-                        <a href="[[*doctors-instagram]]" data-original-title="Instagram" class="social_instagram" rel="nofollow" target="_blank"></a>
-                    </li>
-                    `]]
-                </ul>
-                <!-- social-icons-->
-            </div>
-
-        </div>
-        <!-- doctor-photo-->
-        <!--[[!*doctors-directions:isempty=`col-lg-10`]]-->
-        <div class="col-lg-6 col-xs-8 doctor-txt">
-
-            <h1 class="mt-10">
-                [[*pagetitle]]
-            </h1>
-            <h2 class="mtt50">
-                [[*description]]
-            </h2> [[*content]] [[*doctors-education:isnotempty=`
-            <h3>Образование</h3> [[*doctors-education]] `]] [[*doctors-training:isnotempty=`
-            <h3>Специализация/Повышение квалификации:</h3> [[*doctors-training]] `]]
-
-
-
-
-
-        </div>
-
-        [[*doctors-directions:isnotempty=`
-        <div class="col-lg-4 doctor-txt pt-50">
-
-            <h3>Направления практической деятельности:</h3> [[*doctors-directions]]
-
-
-        </div>`]]
-
-
-
-
-    </article>
-    <!-- article-->
-
+	<article class="row doctors-page-open">
+		[[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
+		<div class="col-lg-2 col-xs-4 doctor-photo text-left pt-20">
+			<a class="fancybox-button zoomer" data-rel="fancybox-button" href="[[*pic-doctor]]"><span class="overlay-zoom"><img alt="" src="[[*pic-doctor:phpthumbof=`w=250&h=250&zc=1`]]" class="five-imgs img-responsive"><span class="zoom-icon"></span></span></a>
+			<div class="contacts-icons pt-20 pb-10">
+				[[*doctors-mail:isnotempty=`
+				<p><i class="fa fa-envelope-o"></i><a href="[[*doctors-mail]]">[[*doctors-mail]]</a></p>`]] 
+				[[*doctors-tel:isnotempty=`
+				<p><i class="fa fa-phone"></i> [[*doctors-tel]]</p>`]]
+			</div>
+			<hr>
+			<div class="text-center">
+				<ul class="inline social-icons pt-20">
+					[[*doctors-facebook:isnotempty=`
+					<li>
+						<a href="[[*doctors-facebook]]" data-original-title="Facebook" class="social_facebook" rel="nofollow" target="_blank"></a>
+					</li>
+					`]][[*doctors-instagram:isnotempty=`
+					<li>
+						<a href="[[*doctors-instagram]]" data-original-title="Instagram" class="social_instagram" rel="nofollow" target="_blank"></a>
+					</li>
+					`]]
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-6 col-xs-8 doctor-txt">
+			<h1 class="mt-10">[[*pagetitle]]</h1>
+			<h2 class="mtt50">[[*description]]</h2> 
+			[[*content]] [[*doctors-education:isnotempty=`
+			<h3>[[++cultureKey:is=`ru`:then=`Образование`]][[++cultureKey:is=`en`:then=`Education`]][[++cultureKey:is=`uz`:then=`Таълим:`]]</h3> 
+			[[*doctors-education]] `]] [[*doctors-training:isnotempty=`
+			<h3>[[++cultureKey:is=`ru`:then=`Специализация/Повышение квалификации:`]][[++cultureKey:is=`en`:then=`Specialization / Further training:`]][[++cultureKey:is=`uz`:then=`Ихтисослик / малака ошириш:`]]</h3> 
+			[[*doctors-training]] `]]
+		</div>
+		[[*doctors-directions:isnotempty=`
+		<div class="col-lg-4 doctor-txt pt-50">
+			<h3>[[++cultureKey:is=`ru`:then=`Направления практической деятельности:`]][[++cultureKey:is=`en`:then=`Directions of practical activity:`]][[++cultureKey:is=`uz`:then=`Амалий фаолият йўналишлари:`]]</h3> 
+			[[*doctors-directions]]
+		</div>`]]
+	</article>
 </div>
-<!--container-->
-
-
-
-
 `:else=`
-<div class="container-fluid img-doctors-page"   style="background: url([[*global-big-picture]]) no-repeat; background-position: center;"> 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 big-page-img" id="img-doctors-page">
-
-            
-
-        </div>
-    </div>
+<div class="container-fluid img-doctors-page" style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 big-page-img" id="img-doctors-page">
+		</div>
+		</div>
+	</div>
 </div>
-</div>
-
 <div class="container content">
-    <article class="row doctors-page">
-
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[*pagetitle]]
-            </h1>
-        </div>
-
-
-        [[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-
-
-        <div id="doctors mt-20" class="col-lg-12">
-            <div class="wrapper-doctors">
-                <div id="filters-container" class="cbp-l-filters-alignLeft pb-10">
-                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">Все</div>
-                    <div data-filter=".ph" class="cbp-filter-item">Пластические хирурги</div>
-                    <div data-filter=".ah" class="cbp-filter-item">Ангиохирург</div>
-                    <div data-filter=".u" class="cbp-filter-item">Уролог</div>
-                    <div data-filter=".g" class="cbp-filter-item">Гинеколог</div>
-                    <div data-filter=".s" class="cbp-filter-item">Стоматологи</div>
-                    <div data-filter=".a" class="cbp-filter-item">Анестезиолог</div>
-                    <div data-filter=".uz" class="cbp-filter-item">Врач УЗИ</div>
-                    <div data-filter=".l" class="cbp-filter-item">Врач лаборант</div>
-                </div>
-                <div id="grid-container" class="cbp-l-grid-gallery">
-                    <div>
-                        [[!getResources? &tpl=`doctors-page-listing` &limit=`0` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]` &sortby=`menuindex` &sortdir=`ASC` ]]
-
-                    </div>
-                </div>
-            </div>
-            <!--wrapper-doctors-->
-
-        </div>
-        <!-- #doctors-->
-
-    </article>
-    <!-- article-->
-
+	<article class="row doctors-page">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1 class="">
+				[[*pagetitle]]
+			</h1>
+		</div>
+		[[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
+		<div id="doctors mt-20" class="col-lg-12">
+			<div class="wrapper-doctors">
+				<div id="filters-container" class="cbp-l-filters-alignLeft pb-10">
+					<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">[[++cultureKey:is=`ru`:then=`Все`]][[++cultureKey:is=`en`:then=`All`]][[++cultureKey:is=`uz`:then=`ХАММАСИ`]]</div>
+					<div data-filter=".ph" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Пластические хирурги`]][[++cultureKey:is=`en`:then=`Plastic surgeons`]][[++cultureKey:is=`uz`:then=`ПЛАСТИК ЖАРРОҲ`]]</div>
+					<div data-filter=".ah" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Ангиохирург`]][[++cultureKey:is=`en`:then=`Angiosurgeon`]][[++cultureKey:is=`uz`:then=`АНГИОХИРУРГ`]]</div>
+					<div data-filter=".u" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Уролог`]][[++cultureKey:is=`en`:then=`Urologist`]][[++cultureKey:is=`uz`:then=`УРОЛОГИЯ`]]</div>
+					<div data-filter=".g" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Гинеколог`]][[++cultureKey:is=`en`:then=`Gynecologist`]][[++cultureKey:is=`uz`:then=`ГИНЕКОЛОГ`]]</div>
+					<div data-filter=".s" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Стоматологи`]][[++cultureKey:is=`en`:then=`Dentists`]][[++cultureKey:is=`uz`:then=`СТОМАТОЛОГ`]]</div>
+					<div data-filter=".a" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Анестезиолог`]][[++cultureKey:is=`en`:then=`Anesthetist`]][[++cultureKey:is=`uz`:then=`АНEСТEЗИОЛОГ`]]</div>
+					<div data-filter=".uz" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Врач УЗИ`]][[++cultureKey:is=`en`:then=`The doctor of ultrasound`]][[++cultureKey:is=`uz`:then=`УЗИ`]]</div>
+					<div data-filter=".l" class="cbp-filter-item">[[++cultureKey:is=`ru`:then=`Врач лаборант`]][[++cultureKey:is=`en`:then=`Doctor the laboratory assistant`]][[++cultureKey:is=`uz`:then=`ЛАБОРАНТ `]]</div>
+				</div>
+				<div id="grid-container" class="cbp-l-grid-gallery">
+					<div>
+						[[!getResources? &tpl=`doctors-page-listing` &limit=`0` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]` &sortby=`menuindex` &sortdir=`ASC` ]]
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
 </div>
-<!--container-->
-
-
-
-
 `]] [[$footer]]
