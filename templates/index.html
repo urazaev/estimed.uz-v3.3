@@ -1,0 +1,150 @@
+[[$header]] [[getResourceField:isequalto=`1`:then=`
+
+<section class="slider" id="slider">
+	<div class="bgfff slider-inner">
+		<div class="slider-mainpage">
+			[[getResources? &tpl=`@INLINE  
+			<div class="item">
+				<a href="[[+longtitle]]"><img src="[[+tv.pic-universe]]" alt="" class="img-responsive"></a>
+			</div>
+			` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[++cultureKey:is=`ru`:then=`296`]][[++cultureKey:is=`en`:then=`361`]][[++cultureKey:is=`uz`:then=`503`]]` &sortby=`menuindex` &sortdir=`ASC` ]]
+		</div>
+	</div>
+</section>
+`:else=``? &id=`[[++cultureKey:is=`ru`:then=`296`]][[++cultureKey:is=`en`:then=`361`]][[++cultureKey:is=`uz`:then=`503`]]` &field=`published`]]
+
+<section class="services" id="services">
+	<div class="container-fluid bgfff services-inner">
+		<div class="row">
+			[[pdoResources? &tpl=`services-listing` &limit=`10` &parents=`[[++cultureKey:is=`ru`:then=`2`]][[++cultureKey:is=`en`:then=`363`]][[++cultureKey:is=`uz`:then=`509`]]` &sortby=`menuindex` &sortdir=`ASC` &where=`{"parent":[[++cultureKey:is=`ru`:then=`2`]][[++cultureKey:is=`en`:then=`363`]][[++cultureKey:is=`uz`:then=`509`]]}` &depth=`1` &showHidden=`0` &includeTVList=`services-menu-img` ]]
+		</div>
+		<!-- row-->
+	</div>
+	<!-- container-->
+</section>
+
+<section class="doctors mainpage-sections" id="doctors">
+	<div class="container bgfff doctors-inner">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>[[++cultureKey:is=`ru`:then=`Наши специалисты`]][[++cultureKey:is=`en`:then=`Our specialists`]][[++cultureKey:is=`uz`:then=`БИЗНИНГ МУТАХАССИСЛАРИМИЗ`]]</h2>
+				<div class="doctors-carousel owl owl-carousel owl-theme">
+					[[!getResources? &tpl=`doctors-carousel` &limit=`6` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[++cultureKey:is=`ru`:then=`8`]][[++cultureKey:is=`en`:then=`364`]][[++cultureKey:is=`uz`:then=`511`]]` &sortby=`menuindex` &sortdir=`ASC` ]]
+				</div>
+				<div class="morebtn-mainpage text-center">
+					<a href="[[~[[++cultureKey:is=`ru`:then=`8`]][[++cultureKey:is=`en`:then=`364`]][[++cultureKey:is=`uz`:then=`511`]]]]" class="btn btn-default mt-30 mb-50 ">[[++cultureKey:is=`ru`:then=`Все специалисты`]][[++cultureKey:is=`en`:then=`All specialists`]][[++cultureKey:is=`uz`:then=`Перевод: Все специалисты`]]</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slogan mainpage-sections parallaxBg" id="slogan">
+	<div class="container-fluid bgfff slogan-inner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="h1 mb-50">[[*longtitle]]</p>
+					<p class="h2">[[*description]]</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+[[getResourceField:isequalto=`1`:then=`
+<section class="responses mainpage-sections" id="responses">
+	<div class="container bgfff responses-inner">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>[[++cultureKey:is=`ru`:then=`Отзывы о нашей клинике`]][[++cultureKey:is=`en`:then=`Testimonials`]][[++cultureKey:is=`uz`:then=`Перевод: Отзывы о нашей клинике`]]</h2>
+				<div class="responses-mainpage owl owl-carousel owl-theme">
+					[[pdoResources? &tpl=`@INLINE &nbsp;
+					<div class="item mainpage-responses-item">
+						<a class="" href="[[~[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]]]#[[+id]]"><img src="/assets/img/avatar-female-2.png" alt="[[+pagetitle]]" class="img-circle img-responsive pull-left" /></a>
+						<h3 class="pb-20 pt-10"><a class="" href="[[~[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]]]#[[+id]]">[[+pagetitle]]</a></h3>
+						<p class="descrption"><a class="" href="[[~[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]]]#[[+id]]">[[+content:notags:ellipsis=`200`]]</a></p>
+					</div>
+					` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]` &sortby=`menuindex` &sortdir=`ASC` ]]
+				</div>
+				<div class="morebtn-mainpage text-center">
+					<a href="[[~[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]]]#RespForm" class="btn btn-default mt-30 mb-50 ">[[++cultureKey:is=`ru`:then=`Оставить отзыв`]][[++cultureKey:is=`en`:then=`Send testimonials`]][[++cultureKey:is=`uz`:then=`Перевод: Оставить отзыв`]]</a>
+					<a href="[[~[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]]]" class="btn btn-default mt-30 mb-50 ">[[++cultureKey:is=`ru`:then=`Все отзывы`]][[++cultureKey:is=`en`:then=`All testimonials`]][[++cultureKey:is=`uz`:then=`Перевод: Оставить отзыв`]]</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+`:else=``? &id=`[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]` &field=`published`]]
+
+[[getResourceField:isequalto=`1`:then=`
+<section class="faq mainpage-sections" id="faq">
+	<div class="container bgfff faq-inner">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>[[++cultureKey:is=`ru`:then=`Часто задаваемые вопросы`]][[++cultureKey:is=`en`:then=`FAQ`]][[++cultureKey:is=`uz`:then=`Перевод: Часто задаваемые вопросы`]]</h2>
+			</div>
+			<div class="col-md-12">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					[[getResources? &tplFirst=`@INLINE &nbsp;
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="heading[[+id]]">
+							<div class="fa fa-question-circle gold-color"></div>&nbsp;
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a>
+							</h4>
+						</div>
+						<div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
+							<div class="panel-body">
+								<i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>[[++cultureKey:is=`ru`:then=`Ответ:`]][[++cultureKey:is=`en`:then=`Question:`]][[++cultureKey:is=`uz`:then=`Перевод: Ответ:`]]</strong> [[+content]]
+							</div>
+						</div>
+					</div>
+					` &tpl=`@INLINE &nbsp;
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="heading[[+id]]">
+							<div class="fa fa-question-circle gold-color"></div>&nbsp;
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a>
+							</h4>
+						</div>
+						<div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
+							<div class="panel-body">
+								<i class="fa fa-quote-left gold-color"></i>&nbsp;
+								<strong>[[++cultureKey:is=`ru`:then=`Ответ:`]][[++cultureKey:is=`en`:then=`Question:`]][[++cultureKey:is=`uz`:then=`Перевод: Ответ:`]]</strong> [[+content]]
+							</div>
+						</div>
+					</div>
+					` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[++cultureKey:is=`ru`:then=`3`]][[++cultureKey:is=`en`:then=`369`]][[++cultureKey:is=`uz`:then=`522`]]` &sortby=`menuindex` &sortdir=`ASC` ]]
+				</div>
+				<div class="twobtns text-center">
+					<a href="[[~3]]#FaqForm" class="btn btn-default mt-30 mb-50">[[++cultureKey:is=`ru`:then=`Задать свой вопрос`]][[++cultureKey:is=`en`:then=`Send your answer`]][[++cultureKey:is=`uz`:then=`Перевод: Задать свой вопрос`]]</a>
+					<a href="[[~3]]" class="btn btn-default mt-30 mb-50">[[++cultureKey:is=`ru`:then=`Смотреть все вопросы`]][[++cultureKey:is=`en`:then=`All questions`]][[++cultureKey:is=`uz`:then=`Перевод: Смотреть все вопросы`]]</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+`:else=``? &id=`[[++cultureKey:is=`ru`:then=`3`]][[++cultureKey:is=`en`:then=`369`]][[++cultureKey:is=`uz`:then=`522`]]` &field=`published`]]
+
+<section class="about mainpage-sections" id="about">
+	<div class="container bgfff about-inner">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>[[++cultureKey:is=`ru`:then=`Наша клиника`]][[++cultureKey:is=`en`:then=`Our clinic`]][[++cultureKey:is=`uz`:then=`Перевод: Наша клиника`]]</h2>
+			</div>
+			<div class="col-md-6 text-center">
+				<a href="[[~107]]"><img src="/assets/img/about-img.jpg" alt="" title="" class="img-responsive center-block">
+				</a>
+			</div>
+			<div class="col-md-6 pt-60">
+				<a href="[[~107]]"> [[++cultureKey:is=`ru`:then=`Клиника «Эстимед» организована в 2004 году. Клиника расположена в собственном современном и комфортабельном здании площадью 1000кв.м. и имеет в штате 25 сотрудников. В подразделении клиники — пластическая хирургия, отоларингология, урология, флебология , гинекология, стоматология (терапевтическая и ортопедическая), лабораторная, ЭКГ и УЗИ диагностика. Клиника оказывает амбулаторные и стационарные услуги.`]][[++cultureKey:is=`en`:then=`Our clinic`]][[++cultureKey:is=`uz`:then=`Перевод: Наша клиника`]]			
+				</a>
+			</div>
+			<div class="col-md-12 text-center"><a href="[[~107]]" class="btn btn-default mt-30 mb-50">[[++cultureKey:is=`ru`:then=`Подробнее о клинике`]][[++cultureKey:is=`en`:then=`Details`]][[++cultureKey:is=`uz`:then=`Перевод: Подробнее о клинике`]]</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+[[$footer]]

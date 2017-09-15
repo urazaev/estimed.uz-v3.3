@@ -1,0 +1,59 @@
+[[$header]]
+<div class="img-about-page" [[*global-big-picture:notempty=`style="background: url([[*global-big-picture]]) no-repeat; background-position: center;"`]]>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 big-page-img" id="img-about-page">
+
+            
+
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container content">
+    <article class="row about-page">
+
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <h1 class="">
+                [[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
+            </h1>
+        </div>
+        
+        [[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
+
+        <div class="col-lg-12 ">
+
+            [[*content]]
+
+
+
+            <h2 class="pb-30 mb-30">наша клиника</h2>
+
+                [[$gallery-page-clinic]]
+
+            <h2 class="pb-30 mb-30">наши специалисты</h2>
+
+            <div class="doctors-carousel owl owl-carousel owl-theme">
+
+               
+                     
+                      [[!getResources? &tpl=`doctors-carousel`  &limit=`999` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`8` &sortby=`menuindex` &sortdir=`ASC` ]]
+                    
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </article>
+    <!-- article-->
+
+</div>
+<!--container-->
+
+
+[[$footer]]

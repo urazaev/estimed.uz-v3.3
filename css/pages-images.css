@@ -1,0 +1,90 @@
+/*images for page*/
+
+.big-page-img {
+    height: 450px;
+    /*    background-color: #eaeaea;*/
+}
+
+.img-blank {
+    background-size: cover !important;
+    height: 400px; 
+    background-position: right center !important;
+}
+
+#img-foreigners-page {}
+
+.img-foreigners-page {
+    background: url(../img/bg-foreigners.jpg) no-repeat;
+    background-size: cover;
+    height: 400px; 
+    background-position: right center;
+    margin-bottom: 20px;
+}
+
+#img-price-page {}
+
+.img-price-page {
+    background: url(../img/bg-price.jpg) no-repeat;
+    background-size: cover;
+    height: 400px; 
+    background-position: left center;
+    margin-bottom: 20px;
+}
+
+.img-contacts-page {
+    background: url(../img/bg-contacts.jpg)  no-repeat;
+    background-size: cover;
+    height: 400px; 
+    background-position: right center;
+    margin-bottom: 20px;
+}
+
+#img-responses-page {}
+
+.img-responses-page {
+    background: url(../img/bg-responses.jpg) no-repeat;
+    background-size: cover;
+    height: 400px; 
+    background-position: right center;
+    margin-bottom: 20px;
+}
+
+#img-doctors-page {}
+
+.img-doctors-page {
+    background: url(../img/bg-doctors.jpg) no-repeat; 
+    background-size: cover;
+    height: 400px; 
+    background-position: center center;
+    margin-bottom: 20px;
+}
+
+#img-faq-page {}
+
+.img-faq-page {
+    background: url(../img/bg-girl1.jpg) no-repeat;
+    background-size: cover;
+    height: 400px; 
+    background-position: left center;
+    margin-bottom: 20px;
+}
+.img-photos-page {
+    background: url(../img/photos-img.jpg) no-repeat;
+    background-size: cover;
+    height: 400px; 
+    background-position: left center;
+/*    margin-bottom: 20px;*/
+}
+ 
+.img-about-page {
+    background: url(../img/bg-about.jpg)  no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 20px;
+    
+}
+
+.img-blank.275 {
+    background-color: #fff;
+}
+/*images for page*/
