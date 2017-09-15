@@ -1,56 +1,39 @@
-[[$header]] 
-
-[[*isfolder:is==`0`:then=`
-
+[[$header]] [[*isfolder:is==`0`:then=`
 <div class="container content">
-    <div class="row gallery-page-open"> 
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
-            </h1>
-        </div>
-        [[breadcrumb? &containerTpl=`breadcrumb-container` ]]
-    </div>
-    <!-- article-->
+	<div class="row gallery-page-open">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1 class="">
+				[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
+			</h1>
+		</div>
+		[[breadcrumb? &containerTpl=`breadcrumb-container` ]]
+	</div>
 </div>
-
-<!--container--> 
-<div class="container gallery-inner mb-40">
-    <div class="row">
-        [[Gallery? &album=`1` &limit=`9999` &thumbTpl=`picsSmall` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*photo-id]]` &sort=`rank` &dir=`DESC`]] 
-        [[+services-gallery]]
-    </div>
+<div class="container gallery-inner [[*photo-id]] mb-40">
+	<div class="row">
+		[[Gallery? &album=`1` &limit=`9999` &thumbTpl=`picsSmall` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*photo-id]]` &sort=`rank` &dir=`DESC`]] 
+		[[+services-gallery]]
+	</div>
 </div>
-
 `:else=`
-
 <div class="img-photos-page" style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12" id="img-photos-page">
-            </div>
-        </div>
-    </div>
-</div> 
-
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12" id="img-photos-page"></div>
+		</div>
+	</div>
+</div>
 <div class="container content">
-    <div class="row gallery-page">
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
-            </h1>
-        </div>
-        [[breadcrumb? &containerTpl=`breadcrumb-container` ]]
-    </div>
-    <!-- article-->
+	<div class="row gallery-page">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1>[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1>
+		</div>
+		[[breadcrumb? &containerTpl=`breadcrumb-container` ]]
+	</div>
 </div>
-
-<!--container-->  
 <div class="container-fluid services-inner">
-    <div class="row">
-       [[pdoResources? &tpl=`services-listing` &limit=`0` &parents=`2` &sortby=`menuindex` &sortdir=`ASC` &where=`{"parent":[[*id]]}` &depth=`1` &showHidden=`0` &includeTVList=`services-menu-img` ]]
-    </div>
+	<div class="row">
+		[[pdoResources? &tpl=`services-listing` &limit=`0` &parents=`2` &sortby=`menuindex` &sortdir=`ASC` &where=`{"parent":[[*id]]}` &depth=`1` &showHidden=`0` &includeTVList=`services-menu-img` ]]
+	</div>
 </div>
-
-`]]
-[[$footer]] 
+`]] [[$footer]]
