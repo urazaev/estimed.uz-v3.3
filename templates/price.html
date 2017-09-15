@@ -1,42 +1,25 @@
 [[$header]]
-
-<div class="img-price-page"  style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 big-page-img" id="img-price-page">
-
-
-        </div>
-    </div>
+<div class="img-price-page" style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 big-page-img" id="img-price-page"></div>
+		</div>
+	</div>
 </div>
-</div> 
 <div class="container content">
-    <article class="row price-page">
-
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[!*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]] 
-            </h1>
-        </div>
-        [[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-        <div class="col-lg-12">
-            <div id="filters-container" class="cbp-l-filters-alignLeft">
-
-                [[!Wayfinder? &rowTpl=`menuOuter` &outerTpl=`outerTpl` &startId=`119` &level=`1` &outerClass=`` &hereClass=`active`  &hereTpl=`menuOuterActive` ]]
-
-            </div>
-
-            [[*content]]
-
-        </div>
-
-
-
-    </article>
-    <!-- article-->
-
+	<article class="row price-page">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1 class="">
+				[[!*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
+			</h1>
+		</div>
+		[[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
+		<div class="col-lg-12">
+			<div id="filters-container" class="cbp-l-filters-alignLeft">
+				[[!Wayfinder? &rowTpl=`menuOuter` &outerTpl=`outerTpl` &startId=`[[++cultureKey:is=`ru`:then=`119`]][[++cultureKey:is=`en`:then=`365`]][[++cultureKey:is=`uz`:then=`518`]]` &level=`1` &outerClass=`` &hereClass=`active` &hereTpl=`menuOuterActive` ]]
+			</div>
+			[[*content]]
+		</div>
+	</article>
 </div>
-<!--container-->
-
 [[$footer]]
