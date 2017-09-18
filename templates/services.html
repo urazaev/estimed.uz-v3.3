@@ -1,538 +1,286 @@
 [[$header]] 
-
 [[*id:is=`2`:then=`
-
 <section class="services" id="services">
-    <div class="container-fluid bgfff services-inner">
-        <div class="row">
-
-            [[pdoResources? &tpl=`services-listing` &limit=`0` &parents=`2` &sortby=`menuindex` &sortdir=`ASC` &where=`{"parent":2}` &depth=`1` &showHidden=`0` &includeTVList=`services-menu-img` ]]
-
-        </div>
-        <!-- row-->
-    </div>
-    <!-- container-->
+	<div class="container-fluid bgfff services-inner">
+		<div class="row">
+			[[pdoResources? &tpl=`services-listing` &limit=`0` &parents=`2` &sortby=`menuindex` &sortdir=`ASC` &where=`{"parent":2}` &depth=`1` &showHidden=`0` &includeTVList=`services-menu-img` ]]
+		</div>
+	</div>
 </section>
-<!--/services-->
-
-`]] [[*id:isnot=`2`:then=` [[*isfolder:is==`0`:then=`
+`]] 
+[[*id:isnot=`2`:then=` [[*isfolder:is==`0`:then=`
 
 <!-- страница -->
 <div class="col-lg-12 img-blank [[*id]]" style="background: url(/[[*pic-services]]) no-repeat;">
-    <div class="container">
-        <div class="row">
-            <div>
-
-            </div>
-            <!-- col-lg-12-->
-        </div>
-        <!-- row-->
-    </div>
-    <!-- container-->
+	<div class="container">
+		<div class="row"><div></div></div>
+	</div>
 </div>
-<!-- img-blank-->
 <div class="container content services-content">
-    <article class="row">
-
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
-            </h1> [[*services-price:isnotempty=`
-
-            <div class="price h2">Стоимость от [[*services-price]]</div>`]]
-
-        </div>
-
-        [[breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-    </article>
-    <!-- article-->
-
+	<article class="row">
+		<div class="col-lg-12 col-sm-12 col-xs-12">
+			<h1 class="">
+				[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
+			</h1> [[*services-price:isnotempty=`
+			<div class="price h2">Стоимость от [[*services-price]]</div>`]]
+		</div>
+		[[breadcrumb? &containerTpl=`breadcrumb-container` ]]
+	</article>
 </div>
-<!--container-->
+
 <div class="service-blue-bg">
-    <div class="container pt-30 pb-30 ">
-
-        <div class="row">
-            <div class="col-md-12" id="services-intro">
-                [[*content]]
-            </div>
-
-        </div>
-        <!-- row -->
-
-    </div>
+	<div class="container pt-30 pb-30 ">
+		<div class="row">
+			<div class="col-md-12" id="services-intro">
+				[[*content]]
+			</div>
+		</div>
+	</div>
 </div>
-<!-- container-->
+
 <div class="container services-content content">
-    <div class="row">
-        <div class="col-md-12 services-folder">
+	<div class="row">
+		<div class="col-md-12 services-folder">
+			[[*service-sub-blue-bg:isnotempty=`
+			<div class="service-sub-blue-bg" id="service-sub-blue-bg">
+				[[*service-sub-blue-bg]]
+			</div>
+			`]] 
+			[[Wayfinder? &startId=`[[*id]]` &level=`1` &outerClass=`` &hereClass=`active` &scheme=`abs` &ph=`services-typess`]] 
+			
+			[[+services-typess:isnotempty=`
+			<div class="services-types" id="services-types">
+				<h2>Виды [[*services-title-rp]]</h2> [[+services-typess]]
+			</div>`]] 
+			
+			[[*services-testimony:isnotempty=`
+			<div class="services-testimony" id="services-testimony">
+				<h2>Показания к [[*services-title-dp]]</h2> [[*services-testimony]]
+			</div>
+			`]] 
+			[[*services-types:isnotempty=`
+			<div class="services-types-second" id="services-types-second">
+				<h2>Виды [[*services-title-rp]]</h2> [[*services-types]]
+			</div>`]] 
+			[[*services-preparation:isnotempty=`
+			<div class="services-preparation" id="services-preparation">
+				<h2>Подготовка к [[*services-title-dp]]</h2> [[*services-preparation]]
+			</div>`]] 
+			[[*services-contraindications:isnotempty=`
+			<div class="services-contraindications" id="services-contraindications">
+				<h2>Противопоказания к [[*services-title-dp]]</h2> [[*services-contraindications]]
+			</div>`]] 
+			[[*services-after:isnotempty=`
+			<div class="services-after" id="services-after">
+				<h2>После [[*services-title-rp]]</h2> [[*services-after]]
+			</div>`]] 
+			
+			[[Gallery? &album=`1` &limit=`15` &thumbTpl=`services-page-gallery` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*id]]` &sort=`rank` &dir=`DESC`]] [[+services-gallery:isnotempty=`
+			<div class="service-gallery" id="services-gallery">
+				<h2 class="mb-40">Фото до и после</h2>
+				<div id="" class="services-gallery owl owl-carousel owl-theme pb-30">
+					[[+services-gallery]]
+				</div>
+			</div>`]]
 
-
-            [[*service-sub-blue-bg:isnotempty=`
-            <div class="service-sub-blue-bg" id="service-sub-blue-bg">
-
-                [[*service-sub-blue-bg]]
-
-            </div>
-            `]] 
-            
-            [[Wayfinder? &startId=`[[*id]]` &level=`1` &outerClass=`` &hereClass=`active` &scheme=`abs` &ph=`services-typess`]] [[+services-typess:isnotempty=`
-            <div class="services-types" id="services-types">
-                <h2>Виды [[*services-title-rp]]</h2> [[+services-typess]]
-            </div>
-            `]] 
-            
-            [[*services-testimony:isnotempty=`
-
-            <!-- services-testimony -->
-            <div class="services-testimony" id="services-testimony">
-
-                <h2>Показания к [[*services-title-dp]]</h2> [[*services-testimony]]
-
-            </div>
-
-            `]] 
-            
-            [[*services-types:isnotempty=`
-
-            <!-- services-types -->
-            <div class="services-types-second" id="services-types-second">
-
-                <h2>Виды [[*services-title-rp]]</h2> [[*services-types]]
-
-            </div>
-
-            `]] 
-            [[*services-preparation:isnotempty=`
-
-            <div class="services-preparation" id="services-preparation">
-
-                <h2>Подготовка к [[*services-title-dp]]</h2> [[*services-preparation]]
-
-            </div>
-            <!-- services-preparation -->
-
-
-            `]] 
-            [[*services-contraindications:isnotempty=`
-
-            <div class="services-contraindications" id="services-contraindications">
-
-                <h2>Противопоказания к [[*services-title-dp]]</h2> [[*services-contraindications]]
-
-            </div>
-            <!-- services-contraindications -->
-
-            `]] 
-            [[*services-after:isnotempty=`
-
-            <div class="services-after" id="services-after">
-
-                <h2>После [[*services-title-rp]]</h2> [[*services-after]]
-
-            </div>
-            <!-- services-after -->
-
-            `]] 
-            [[Gallery? &album=`1` &limit=`15` &thumbTpl=`services-page-gallery` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*id]]` &sort=`rank` &dir=`DESC`]] [[+services-gallery:isnotempty=`
-            <div class="service-gallery" id="services-gallery">
-                <h2 class="mb-40">Фото до и после</h2>
-                <div id="" class="services-gallery owl owl-carousel owl-theme pb-30">
-                    [[+services-gallery]]
-                </div>
-            </div>
-            <!-- gallery -->
-            `]]
-
-            <div class="service-more-buttons" id="services-faq">
-                <h2>Вопрос - ответ</h2>
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-
-                    [[getResources? &tplFirst=`@INLINE &nbsp;
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading[[+id]]">
-                            <div class="fa fa-question-circle gold-color"></div>&nbsp;
-                            <h4 class="panel-title">
-                                 
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
-                                     [[+pagetitle]]
-                                </a>
-                              </h4>
-                        </div>
-
-                        <div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
-                            <div class="panel-body">
-                                <i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>Ответ:</strong> [[+content]]
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- panel panel-default-->
-
-
-                    ` &tpl=`@INLINE &nbsp;
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading[[+id]]">
-                            <div class="fa fa-question-circle gold-color"></div>&nbsp;
-                            <h4 class="panel-title">
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
-                                  [[+pagetitle]]
-                                </a>
-                              </h4>
-                        </div>
-
-                        <div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
-                            <div class="panel-body">
-                                <i class="fa fa-quote-left gold-color"></i>&nbsp;
-                                <strong>Ответ:</strong> [[+content]]
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- panel panel-default-->
-
-
-
-                    ` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`3` &sortby=`menuindex` &sortdir=`ASC` ]]
-
-                </div>
-                <!-- panel-group-->
-
-
-                <div class="morebtn-mainpage text-center">
-                    <a href="[[~3]]#FaqForm" class="btn btn-default mt-30">Задать свой вопрос</a>
-                    <a href="[[~3]]" class="btn btn-default mt-30">Смотреть все вопросы</a>
-                </div>
-
-            </div>
-
-            <div class="services-responses" id="services-responses">
-
-                <h2>Отзывы</h2>
-                <div class="responses-mainpage owl owl-carousel owl-theme">
-
-                    [[pdoResources? &tpl=`@INLINE &nbsp;
-
-                    <div class="item mainpage-responses-item">
-                        <a class="" href="[[~103]]#[[+id]]">
-                            <img src="/assets/img/avatar-female-2.png" alt="[[+pagetitle]]" class="img-circle img-responsive pull-left" />
-                        </a>
-
-                        <h3 class="pb-20 pt-10">
-                        
-                         <a class="" href="[[~103]]#[[+id]]">
-                         [[+pagetitle]]
-                            </a>
-                            </h3>
-
-                        <p class="descrption">
-                            <a class="" href="[[~103]]#[[+id]]">
-                            [[+content:notags:ellipsis=`200`]]
-                            </a>
-                        </p>
-
-                    </div>
-
-                    ` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`103` &sortby=`menuindex` &sortdir=`ASC` ]]
-
-                </div>
-
-                <div class="morebtn-mainpage text-center">
-                    <a href="[[~103]]#RespForm" class="btn btn-default mt-30 mb-50 ">Оставить отзыв</a>
-                    <a href="[[~103]]" class="btn btn-default mt-30 mb-50 ">Все отзывы</a>
-                </div>
-
-            </div>
-        </div>
-        <!-- services-folder-->
-    </div>
-    <!-- row-->
+			<div class="service-more-buttons" id="services-faq">
+				<h2>Вопрос - ответ</h2>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					[[getResources? &tplFirst=`@INLINE &nbsp;
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="heading[[+id]]">
+							<div class="fa fa-question-circle gold-color"></div>&nbsp;
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a>
+							</h4>
+						</div>
+						<div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
+							<div class="panel-body">
+								<i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>Ответ:</strong> [[+content]]
+							</div>
+						</div>
+					</div>
+					` &tpl=`@INLINE &nbsp;
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="heading[[+id]]">
+							<div class="fa fa-question-circle gold-color"></div>&nbsp;
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a>
+							</h4>
+						</div>
+						<div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
+							<div class="panel-body">
+								<i class="fa fa-quote-left gold-color"></i>&nbsp;
+								<strong>Ответ:</strong> [[+content]]
+							</div>
+						</div>
+					</div>
+					` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`3` &sortby=`menuindex` &sortdir=`ASC` ]]
+				</div>
+				<div class="morebtn-mainpage text-center">
+					<a href="[[~3]]#FaqForm" class="btn btn-default mt-30">Задать свой вопрос</a>
+					<a href="[[~3]]" class="btn btn-default mt-30">Смотреть все вопросы</a>
+				</div>
+			</div>
+			<div class="services-responses" id="services-responses">
+				<h2>Отзывы</h2>
+				<div class="responses-mainpage owl owl-carousel owl-theme">
+					[[pdoResources? &tpl=`@INLINE &nbsp;
+					<div class="item mainpage-responses-item">
+						<a class="" href="[[~103]]#[[+id]]">
+							<img src="/assets/img/avatar-female-2.png" alt="[[+pagetitle]]" class="img-circle img-responsive pull-left" />
+						</a>
+						<h3 class="pb-20 pt-10"><a class="" href="[[~103]]#[[+id]]">[[+pagetitle]]</a></h3>
+						<p class="descrption"><a class="" href="[[~103]]#[[+id]]">[[+content:notags:ellipsis=`200`]]</a></p>
+					</div>
+					` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`103` &sortby=`menuindex` &sortdir=`ASC` ]]
+				</div>
+				<div class="morebtn-mainpage text-center">
+					<a href="[[~103]]#RespForm" class="btn btn-default mt-30 mb-50 ">Оставить отзыв</a><a href="[[~103]]" class="btn btn-default mt-30 mb-50 ">Все отзывы</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<!--container-->
-
 
 `:else=`
-
-<!-- раздел -->
-
 <div class="col-lg-12 img-blank [[*id]]" style="background: url(/[[*pic-services]]) no-repeat;">
-    <div class="container">
-        <div class="row">
-            <div>
-
-            </div>
-            <!-- col-lg-12-->
-        </div>
-        <!-- row-->
-    </div>
-    <!-- container-->
+	<div class="container">
+		<div class="row"><div></div></div>
+	</div>
 </div>
-<!-- img-blank-->
 <div class="container content services-folder">
-    <article class="row">
-
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h1 class="">
-                [[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]
-            </h1>
-        </div>
-
-        [[breadcrumb? &containerTpl=`breadcrumb-container` ]]
-
-    </article>
-    <!-- article-->
-
+	<article class="row">
+		<div class="col-lg-12 col-sm-12 col-xs-12"><h1 class="">[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1></div>
+		[[breadcrumb? &containerTpl=`breadcrumb-container` ]]
+	</article>
 </div>
-<!--container-->
 <div class="service-blue-bg">
-    <div class="container pt-30 pb-30 ">
-
-        <div class="row">
-            <div class="col-md-12" id="services-intro">
-                [[*content]]
-            </div>
-
-        </div>
-        <!-- row -->
-
-    </div>
+	<div class="container pt-30 pb-30 ">
+		<div class="row">
+			<div class="col-md-12" id="services-intro">
+				[[*content]]
+			</div>
+		</div>
+	</div>
 </div>
-
-<!-- container-->
 <div class="container  services-folder content">
-    <div class="row">
-
-
-
-
-
-
-        <div class="col-md-12 services-folder">
-
-            [[*service-sub-blue-bg:isnotempty=`
-            <div class="service-sub-blue-bg" id="service-sub-blue-bg">
-
-                [[*service-sub-blue-bg]]
-
-            </div>
-            `]] 
-            [[Wayfinder? &startId=`[[*id]]` &level=`1` &outerClass=`` &hereClass=`active` &scheme=`abs` &ph=`services-typess`]] [[+services-typess:isnotempty=`
-            <div class="services-types" id="services-types">
-                <h2>Виды [[*services-title-rp]]</h2> [[+services-typess]]
-            </div>
-            `]] 
-            [[*services-price:isnotempty=`
-            <div class="services-price" id="services-price">
-                <h2>Цена на [[*services-title-vp]]</h2> [[*services-price]]
-
-
-
-            </div>
-            `]] 
-            [[*services-testimony:isnotempty=`
-
-            <!-- services-testimony -->
-            <div class="services-testimony" id="services-testimony">
-
-                <h2>Показания к [[*services-title-dp]]</h2> [[*services-testimony]]
-
-            </div>
-
-            `]] 
-            [[*services-types:isnotempty=`
-
-            <!-- services-types -->
-            <div class="services-types-second" id="services-types-second">
-
-                <h2>Виды [[*services-title-rp]]</h2> [[*services-types]]
-
-            </div>
-
-            `]] 
-            [[*services-preparation:isnotempty=`
-
-            <div class="services-preparation" id="services-preparation">
-
-                <h2>Подготовка к [[*services-title-dp]]</h2> [[*services-preparation]]
-
-            </div>
-            <!-- services-preparation -->
-
-
-            `]] 
-            [[*services-contraindications:isnotempty=`
-
-            <div class="services-contraindications" id="services-contraindications">
-
-                <h2>Противопоказания к [[*services-title-dp]]</h2> [[*services-contraindications]]
-
-            </div>
-            <!-- services-contraindications -->
-
-            `]] 
-            [[*services-after:isnotempty=`
-
-            <div class="services-after" id="services-after">
-
-                <h2>После [[*services-title-rp]]</h2> [[*services-after]]
-
-            </div>
-            <!-- services-after -->
-
-            `]]
-
-           
-           
-           [[+services-doctors:isnotempty=`
-           
-            <div class="doctors" id="services-doctors">
-                <h2 class="mb-40">Наши специалисты</h2>
-                
-                <div class="doctors-services-carousel owl owl-carousel owl-theme">
-
-                    [[getResources? &tpl=`doctors-carousel` &limit=`6` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`8` &tvFilters=`doctors-category==[[*doctors-category]]`  &sortby=`menuindex` &sortdir=`ASC` &toPlaceholder=`services-doctors` ]]
-                     [[+services-doctors]]
-                </div>
-
-                <div class="morebtn-mainpage text-center">
-                    <a href="[[~8]]" class="btn btn-default mt-30 mb-30 ">Все специалисты</a>
-                </div>
-
-
-            </div>
-            <!-- doctors -->
-            `]]
-            
-
-            [[Gallery? &album=`1` &limit=`15` &thumbTpl=`services-page-gallery` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*id]]` &sort=`rank` &dir=`DESC`]] [[+services-gallery:isnotempty=`
-            <div class="service-gallery" id="services-gallery">
-                <h2 class="mb-40">Фото до и после</h2>
-                <div id="" class="services-gallery owl owl-carousel owl-theme pb-30">
-                    [[+services-gallery]]
-                </div>
-            </div>
-            <!-- gallery -->
-            `]]
-
-            <div class="service-more-buttons" id="services-faq">
-
-                <h2>Вопрос - ответ</h2>
-
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-                    [[getResources? &tplFirst=`@INLINE &nbsp;
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading[[+id]]">
-                            <div class="fa fa-question-circle gold-color"></div>&nbsp;
-                            <h4 class="panel-title">
-                                 
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
- [[+pagetitle]]
-                                </a>
-                              </h4>
-                        </div>
-
-                        <div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
-                            <div class="panel-body">
-                                <i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>Ответ:</strong> [[+content]]
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- panel panel-default-->
-
-                    ` &tpl=`@INLINE &nbsp;
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading[[+id]]">
-                            <div class="fa fa-question-circle gold-color"></div>&nbsp;
-                            <h4 class="panel-title">
-                                 
-
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
-                                  [[+pagetitle]]
-                                </a>
-                              </h4>
-                        </div>
-
-                        <div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
-                            <div class="panel-body">
-                                <i class="fa fa-quote-left gold-color"></i>&nbsp;
-                                <strong>Ответ:</strong> [[+content]]
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- panel panel-default-->
-
-
-
-                    ` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`3` &sortby=`menuindex` &sortdir=`ASC` ]]
-
-                </div>
-                <!-- panel-group-->
-
-
-                <div class="morebtn-mainpage text-center">
-                    <a href="[[~3]]#FaqForm" class="btn btn-default mt-30">Задать свой вопрос</a>
-                    <a href="[[~3]]" class="btn btn-default mt-30">Смотреть все вопросы</a>
-                </div>
-
-            </div>
-
-            <div class="services-responses" id="services-responses">
-
-                <h2>Отзывы</h2>
-                <div class="responses-mainpage owl owl-carousel owl-theme">
-
-                    [[pdoResources? &tpl=`@INLINE &nbsp;
-
-                    <div class="item mainpage-responses-item">
-                        <a class="" href="[[~103]]#[[+id]]">
-                            <img src="/assets/img/avatar-female-2.png" alt="[[+pagetitle]]" class="img-circle img-responsive pull-left" />
-                        </a>
-
-                        <h3 class="pb-20 pt-10">
-                        
-                         <a class="" href="[[~103]]#[[+id]]">
-                         [[+pagetitle]]
-                            </a>
-                            </h3>
-
-                        <p class="descrption">
-                            <a class="" href="[[~103]]#[[+id]]">
-                            [[+content:notags:ellipsis=`200`]]
-                            </a>
-                        </p>
-
-                    </div>
-
-                    ` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`103` &sortby=`menuindex` &sortdir=`ASC` ]]
-
-                </div>
-
-                <div class="morebtn-mainpage text-center">
-                    <a href="[[~103]]#RespForm" class="btn btn-default mt-30 mb-50 ">Оставить отзыв</a>
-                    <a href="[[~103]]" class="btn btn-default mt-30 mb-50 ">Все отзывы</a>
-                </div>
-
-
-            </div>
-
-
-        </div>
-        <!-- services-folder-->
-
-
-    </div>
-    <!-- row-->
+	<div class="row">
+		<div class="col-md-12 services-folder">
+			[[*service-sub-blue-bg:isnotempty=`
+			<div class="service-sub-blue-bg" id="service-sub-blue-bg">
+				[[*service-sub-blue-bg]]
+			</div>`]] 
+			[[Wayfinder? &startId=`[[*id]]` &level=`1` &outerClass=`` &hereClass=`active` &scheme=`abs` &ph=`services-typess`]] 
+			[[+services-typess:isnotempty=`
+			<div class="services-types" id="services-types">
+				<h2>Виды [[*services-title-rp]]</h2> 
+				[[+services-typess]]
+			</div>
+			`]] [[*services-price:isnotempty=`
+			<div class="services-price" id="services-price">
+				<h2>Цена на [[*services-title-vp]]</h2> 
+				[[*services-price]]
+			</div>
+			`]] 
+			[[*services-testimony:isnotempty=`
+			<div class="services-testimony" id="services-testimony">
+				<h2>Показания к [[*services-title-dp]]</h2> [[*services-testimony]]
+			</div>
+			`]] 
+			[[*services-types:isnotempty=`
+			<div class="services-types-second" id="services-types-second">
+				<h2>Виды [[*services-title-rp]]</h2> [[*services-types]]
+			</div>
+			`]] 
+			[[*services-preparation:isnotempty=`
+			<div class="services-preparation" id="services-preparation">
+				<h2>Подготовка к [[*services-title-dp]]</h2> [[*services-preparation]]
+			</div>
+			`]] 
+			[[*services-contraindications:isnotempty=`
+			<div class="services-contraindications" id="services-contraindications">
+				<h2>Противопоказания к [[*services-title-dp]]</h2> [[*services-contraindications]]
+			</div>
+			`]] 
+			[[*services-after:isnotempty=`
+			<div class="services-after" id="services-after">
+				<h2>После [[*services-title-rp]]</h2> [[*services-after]]
+			</div>
+			`]] 
+			[[+services-doctors:isnotempty=`
+			<div class="doctors" id="services-doctors">
+				<h2 class="mb-40">Наши специалисты</h2>
+				<div class="doctors-services-carousel owl owl-carousel owl-theme">
+					[[getResources? &tpl=`doctors-carousel` &limit=`6` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`8` &tvFilters=`doctors-category==[[*doctors-category]]` &sortby=`menuindex` &sortdir=`ASC` &toPlaceholder=`services-doctors` ]] [[+services-doctors]]
+				</div>
+				<div class="morebtn-mainpage text-center">
+					<a href="[[~8]]" class="btn btn-default mt-30 mb-30 ">Все специалисты</a>
+				</div>
+			</div>
+			`]] 
+			[[Gallery? &album=`1` &limit=`15` &thumbTpl=`services-page-gallery` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*id]]` &sort=`rank` &dir=`DESC`]] [[+services-gallery:isnotempty=`
+			<div class="service-gallery" id="services-gallery">
+				<h2 class="mb-40">Фото до и после</h2>
+				<div id="" class="services-gallery owl owl-carousel owl-theme pb-30">
+					[[+services-gallery]]
+				</div>
+			</div>
+			`]]
+			<div class="service-more-buttons" id="services-faq">
+				<h2>Вопрос - ответ</h2>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					[[getResources? &tplFirst=`@INLINE &nbsp;
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="heading[[+id]]">
+							<div class="fa fa-question-circle gold-color"></div>&nbsp;
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a>
+							</h4>
+						</div>
+						<div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
+							<div class="panel-body">
+								<i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>Ответ:</strong> [[+content]]
+							</div>
+						</div>
+					</div>
+					` &tpl=`@INLINE &nbsp;
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="heading[[+id]]">
+							<div class="fa fa-question-circle gold-color"></div>&nbsp;
+							<h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">[[+pagetitle]]</a></h4>
+						</div>
+						<div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
+							<div class="panel-body">
+								<i class="fa fa-quote-left gold-color"></i>&nbsp;
+								<strong>Ответ:</strong> [[+content]]
+							</div>
+						</div>
+					</div>
+					` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`3` &sortby=`menuindex` &sortdir=`ASC` ]]
+				</div>
+				<div class="morebtn-mainpage text-center">
+					<a href="[[~3]]#FaqForm" class="btn btn-default mt-30">Задать свой вопрос</a>
+					<a href="[[~3]]" class="btn btn-default mt-30">Смотреть все вопросы</a>
+				</div>
+			</div>
+			<div class="services-responses" id="services-responses">
+				<h2>Отзывы</h2>
+				<div class="responses-mainpage owl owl-carousel owl-theme">
+					[[pdoResources? &tpl=`@INLINE &nbsp;
+					<div class="item mainpage-responses-item">
+						<a class="" href="[[~103]]#[[+id]]"><img src="/assets/img/avatar-female-2.png" alt="[[+pagetitle]]" class="img-circle img-responsive pull-left" /></a>
+						<h3 class="pb-20 pt-10"><a class="" href="[[~103]]#[[+id]]">[[+pagetitle]]</a></h3>
+						<p class="descrption"><a class="" href="[[~103]]#[[+id]]">[[+content:notags:ellipsis=`200`]]</a></p>
+					</div>
+					` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`103` &sortby=`menuindex` &sortdir=`ASC` ]]
+				</div>
+				<div class="morebtn-mainpage text-center">
+					<a href="[[~103]]#RespForm" class="btn btn-default mt-30 mb-50 ">Оставить отзыв</a><a href="[[~103]]" class="btn btn-default mt-30 mb-50 ">Все отзывы</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<!--container-->
 `]] `]] 
-
 [[$footer]]
