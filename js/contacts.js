@@ -1,76 +1,76 @@
 var ContactForm = function () {
 
-    return {
+	return {
 
-        //Contact Form
-        initContactForm: function () {
-            // Validation
-            $("#sky-form3").validate({
-                // Rules for form validation
-                rules: {
-                    name: {
-                        required: true
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    message: {
-                        required: true,
-                        minlength: 10
-                    },
+		//Contact Form
+		initContactForm: function () {
+			// Validation
+			$("#sky-form3").validate({
+				// Rules for form validation
+				rules: {
+					name: {
+						required: true
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					message: {
+						required: true,
+						minlength: 10
+					},
 
-                    captcha: {
-                        required: true,
-                        remote: '/assets/plugins/sky-forms-pro/skyforms/captcha/process.php'
-                    },
-                    robot: {
-                        required: true
-                    }
-                },
+					captcha: {
+						required: true,
+						remote: '/assets/plugins/sky-forms-pro/skyforms/captcha/process.php'
+					},
+					robot: {
+						required: true
+					}
+				},
 
-                // Messages for form validation
-                messages: {
-                    name: {
-                        required: 'Введите ваше имя',
-                    },
-                    email: {
-                        required: 'Введите email',
-                        email: 'Введите корректный email'
-                    },
-                    message: {
-                        required: 'Введите сообщение',
-                        minlength: 'Слишком короткое сообщение'
-                    },
-                    captcha: {
-                        required: 'Введите символы',
-                        remote: 'Введите правильно символы'
-                    },
+				// Messages for form validation
+				messages: {
+					name: {
+						required: 'Введите ваше имя',
+					},
+					email: {
+						required: 'Введите email',
+						email: 'Введите корректный email'
+					},
+					message: {
+						required: 'Введите сообщение',
+						minlength: 'Слишком короткое сообщение'
+					},
+					captcha: {
+						required: 'Введите символы',
+						remote: 'Введите правильно символы'
+					},
 
-                    robot: {
-                        required: 'Читаем письма только от людей'
-                    }
-                },
+					robot: {
+						required: 'Читаем письма только от людей'
+					}
+				},
 
-                // Ajax form submition                  
-                submitHandler: function (form) {
-                    $(form).ajaxSubmit({
-                        beforeSend: function () {
-                            $('#sky-form3 button[type="submit"]').attr('disabled', true);
-                        },
-                        success: function () {
-                            $("#sky-form3").addClass('submited');
-                        }
-                    });
-                },
+				// Ajax form submition                  
+				submitHandler: function (form) {
+					$(form).ajaxSubmit({
+						beforeSend: function () {
+							$('#sky-form3 button[type="submit"]').attr('disabled', true);
+						},
+						success: function () {
+							$("#sky-form3").addClass('submited');
+						}
+					});
+				},
 
-                // Do not change code below
-                errorPlacement: function (error, element) {
-                    error.insertBefore(element.parent());
-                }
-            });
-        }
+				// Do not change code below
+				errorPlacement: function (error, element) {
+					error.insertBefore(element.parent());
+				}
+			});
+		}
 
-    };
+	};
 
 }();
