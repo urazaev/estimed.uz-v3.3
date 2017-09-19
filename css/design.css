@@ -1888,3 +1888,54 @@ a.social-icon {
 		display: block !important;
 	}
 }
+
+.multilanguage__switcher {
+	position: absolute;
+	top: 44px;
+	right: 80px;
+	list-style: none;
+}
+
+.multilanguage__item {
+	position: relative;
+}
+
+.multilanguage__item .ru::before,
+.multilanguage__item .en::before,
+.multilanguage__item .uz::before {
+	content: "";
+	width: 25px;
+	height: 15px;
+	position: absolute;
+	left: 0;
+	top: 5px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.multilanguage__item .ru::before {
+	background-image: url("../img/ico-russia.png");
+}
+
+.multilanguage__item .uz::before {
+	background-image: url("../img/ico-uzbek.png");
+}
+
+.multilanguage__item .en::before {
+	background-image: url("../img/ico-english.png");
+}
+
+.multilanguage__item .ru::after {
+	content: "На Русском";
+	padding-left: 30px;
+}
+
+.multilanguage__item .uz::after {
+	content: "Узбек Тили";
+	padding-left: 30px;
+}
+
+.multilanguage__item .en::after {
+	content: "In English";
+	padding-left: 30px;
+}
