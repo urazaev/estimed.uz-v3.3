@@ -1,0 +1,330 @@
+/**/
+
+
+/* font */
+
+
+/**/
+
+
+/**/
+
+
+/* defaults */
+
+
+/**/
+
+.sky-form header {}
+
+
+/**/
+
+
+/* textareas */
+
+
+/**/
+
+.sky-form .textarea textarea {
+	height: auto;
+	resize: none;
+}
+
+.sky-form .textarea-resizable textarea {
+	resize: vertical;
+}
+
+.sky-form .textarea-expandable textarea {
+	/*	height: 39px;*/
+}
+
+.sky-form .textarea-expandable textarea:focus {
+	height: auto;
+}
+
+
+/**/
+
+
+/* buttons */
+
+
+/**/
+
+.sky-form .button {
+	float: right;
+	height: 39px;
+	overflow: hidden;
+	margin: 10px 0 0 20px;
+	padding: 0 25px;
+	outline: none;
+	border: 0;
+	font: 300 15px/39px 'Open Sans', Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.sky-form .button-uploading {
+	position: relative;
+	color: transparent;
+	cursor: default;
+}
+
+.sky-form .button-uploading:after {
+	content: 'Uploading...';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	-o-animation: blink 1s linear infinite;
+	-ms-animation: blink 1s linear infinite;
+	-moz-animation: blink 1s linear infinite;
+	-webkit-animation: blink 1s linear infinite;
+}
+
+@-o-keyframes blink {
+	0% {
+		opacity: 1
+	}
+	50% {
+		opacity: 0.3
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+@-ms-keyframes blink {
+	0% {
+		opacity: 1
+	}
+	50% {
+		opacity: 0.3
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1
+	}
+	50% {
+		opacity: 0.3
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1
+	}
+	50% {
+		opacity: 0.3
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+
+/**/
+
+
+/* error state */
+
+
+/**/
+
+.sky-form .state-error input,
+.sky-form .state-error select,
+.sky-form .state-error select+i,
+.sky-form .state-error textarea,
+.sky-form .radio.state-error i,
+.sky-form .checkbox.state-error i,
+.sky-form .toggle.state-error i,
+.sky-form .toggle.state-error input:checked+i {
+	background: #fff0f0;
+}
+
+em.invalid {
+	display: block;
+	margin-bottom: 6px;
+	padding: 0 1px;
+	font-style: normal;
+	font-size: 11px;
+	line-height: 15px;
+	color: #ee9393;
+}
+
+.sky-form .rating.state-error+em {
+	margin-top: -4px;
+	margin-bottom: 4px;
+}
+
+
+/**/
+
+
+/* success state */
+
+
+/**/
+
+.sky-form .state-success input,
+.sky-form .state-success select,
+.sky-form .state-success select+i,
+.sky-form .state-success textarea,
+.sky-form .radio.state-success i,
+.sky-form .checkbox.state-success i,
+.sky-form .toggle.state-success i,
+.sky-form .toggle.state-success input:checked+i {
+	background: #f0fff0;
+}
+
+.sky-form .state-success+em {
+	display: block;
+	margin-top: 6px;
+	padding: 0 1px;
+	font-style: normal;
+	font-size: 11px;
+	line-height: 15px;
+	color: #ee9393;
+}
+
+.sky-form .note-success {
+	color: #6fb679;
+}
+
+
+/**/
+
+
+/* disabled state */
+
+
+/**/
+
+.sky-form .input.state-disabled input,
+.sky-form .select.state-disabled,
+.sky-form .textarea.state-disabled,
+.sky-form .radio.state-disabled,
+.sky-form .checkbox.state-disabled,
+.sky-form .toggle.state-disabled,
+.sky-form .button.state-disabled {
+	cursor: default;
+	opacity: 0.5;
+}
+
+.sky-form .input.state-disabled:hover input,
+.sky-form .select.state-disabled:hover select,
+.sky-form .textarea.state-disabled:hover textarea,
+.sky-form .radio.state-disabled:hover i,
+.sky-form .checkbox.state-disabled:hover i,
+.sky-form .toggle.state-disabled:hover i {
+	border-color: #e5e5e5;
+}
+
+
+/**/
+
+
+/* submited state */
+
+
+/**/
+
+.sky-form .message {
+	display: none;
+	color: #0c364c !important;
+}
+
+.sky-form .message i {
+	display: block;
+	margin: 0 auto 20px;
+	width: 81px;
+	height: 81px;
+	border: 1px solid #0c364c;
+	border-radius: 50%;
+	font-size: 30px;
+	line-height: 81px;
+	color: #0c364c !important;
+}
+
+.sky-form.submited fieldset,
+.sky-form.submited footer {
+	display: none;
+}
+
+.sky-form.submited .message {
+	display: block;
+	padding: 100px 30px;
+	/*	background: rgba(255,255,255,.9);*/
+	text-align: center;
+}
+
+
+/**/
+
+
+/* bootstrap compatibility */
+
+
+/**/
+
+
+/*
+.sky-form *,
+.sky-form *:after,
+.sky-form *:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+}
+*/
+
+.sky-form .label {
+	border-radius: 0;
+	font-size: 100%;
+	text-align: left;
+	white-space: normal;
+	color: inherit;
+}
+
+.sky-form .radio,
+.sky-form .checkbox {
+	font-weight: 400;
+}
+
+.sky-form .radio+.radio,
+.sky-form .checkbox+.checkbox {
+	margin-top: 0;
+}
+
+
+/**/
+
+
+/* captcha inputs */
+
+
+/**/
+
+.sky-form .input-captcha img {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border-left: 1px solid #e5e5e5;
+}
+
+.form-group {
+	position: relative;
+}

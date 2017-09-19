@@ -1,14 +1,14 @@
 [[$header]] 
-[[*id:is=`2`:then=`
+[[*id:is=`[[++cultureKey:is=`ru`:then=`2`]][[++cultureKey:is=`en`:then=`363`]][[++cultureKey:is=`uz`:then=`509`]]`:then=`
 <section class="services" id="services">
 	<div class="container-fluid bgfff services-inner">
 		<div class="row">
-			[[pdoResources? &tpl=`services-listing` &limit=`0` &parents=`2` &sortby=`menuindex` &sortdir=`ASC` &where=`{"parent":2}` &depth=`1` &showHidden=`0` &includeTVList=`services-menu-img` ]]
+			[[pdoResources? &tpl=`services-listing` &limit=`0` &parents=`2` &sortby=`menuindex` &sortdir=`ASC` &where=`{"parent":[[++cultureKey:is=`ru`:then=`2`]][[++cultureKey:is=`en`:then=`363`]][[++cultureKey:is=`uz`:then=`509`]]}` &depth=`1` &showHidden=`0` &includeTVList=`services-menu-img` ]]
 		</div>
 	</div>
 </section>
 `]] 
-[[*id:isnot=`2`:then=`[[*isfolder:is==`0`:then=`
+[[*id:isnot=`[[++cultureKey:is=`ru`:then=`2`]][[++cultureKey:is=`en`:then=`363`]][[++cultureKey:is=`uz`:then=`509`]]`:then=`[[*isfolder:is==`0`:then=`
 <!-- страница -->
 <div class="col-lg-12 img-blank [[*id]]" style="background: url(/[[*pic-services]]) no-repeat;">
 	<div class="container">
@@ -49,38 +49,36 @@
 			
 			[[+services-typess:isnotempty=`
 			<div class="services-types" id="services-types">
-				<h2>Виды [[*services-title-rp]]</h2> 
+				<h2>[[++cultureKey:is=`ru`:then=`Виды [[*services-title-rp]]`]][[++cultureKey:is=`en`:then=`Types`]][[++cultureKey:is=`uz`:then=`ТУРЛАРИ`]] </h2>
 				[[+services-typess]]
 			</div>`]] 
-			
 			[[*services-testimony:isnotempty=`
 			<div class="services-testimony" id="services-testimony">
-				<h2>Показания к [[*services-title-dp]]</h2> [[*services-testimony]]
+				<h2>[[++cultureKey:is=`ru`:then=`Показания к [[*services-title-dp]]`]][[++cultureKey:is=`en`:then=`Indications `]][[++cultureKey:is=`uz`:then=`КЎРСАТМАЛАР`]]</h2> [[*services-testimony]]
 			</div>`]] 
 			[[*services-types:isnotempty=`
 			<div class="services-types-second" id="services-types-second">
-				<h2>Виды [[*services-title-rp]]</h2> 
+				<h2>[[++cultureKey:is=`ru`:then=`Виды [[*services-title-rp]]`]][[++cultureKey:is=`en`:then=`Types`]][[++cultureKey:is=`uz`:then=`ТУРЛАРИ`]] </h2>
 				[[*services-types]]
 			</div>`]] 
 			[[*services-preparation:isnotempty=`
 			<div class="services-preparation" id="services-preparation">
-				<h2>Подготовка к [[*services-title-dp]]</h2> 
-				[[*services-preparation]]
+				<h2>[[++cultureKey:is=`ru`:then=`Подготовка к [[*services-title-dp]]`]][[++cultureKey:is=`en`:then=`Preparation`]][[++cultureKey:is=`uz`:then=`ТАЙЁРГАРЛИК`]] </h2> [[*services-preparation]]
 			</div>`]] 
 			[[*services-contraindications:isnotempty=`
 			<div class="services-contraindications" id="services-contraindications">
-				<h2>Противопоказания к [[*services-title-dp]]</h2> 
+				<h2>[[++cultureKey:is=`ru`:then=`Противопоказания к [[*services-title-dp]]`]][[++cultureKey:is=`en`:then=`Contraindications `]][[++cultureKey:is=`uz`:then=`ҚАРШИ КЎРСАТМАЛАР `]] </h2> 
 				[[*services-contraindications]]
 			</div>`]] 
 			[[*services-after:isnotempty=`
 			<div class="services-after" id="services-after">
-				<h2>После [[*services-title-rp]]</h2> 
+				<h2>[[++cultureKey:is=`ru`:then=`После [[*services-title-rp]]`]][[++cultureKey:is=`en`:then=`After`]][[++cultureKey:is=`uz`:then=`СЎНГ`]] </h2> 
 				[[*services-after]]
 			</div>`]] 
 			
 			[[Gallery? &album=`1` &limit=`15` &thumbTpl=`services-page-gallery` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*id]]` &sort=`rank` &dir=`DESC`]] [[+services-gallery:isnotempty=`
 			<div class="service-gallery" id="services-gallery">
-				<h2 class="mb-40">Фото до и после</h2>
+				<h2 class="mb-40">[[++cultureKey:is=`ru`:then=`Фото до и после`]][[++cultureKey:is=`Before and after photos`:then=`364`]][[++cultureKey:is=`uz`:then=`Пластикадан олдин ва кейинги фотолар`]]</h2>
 				<div id="" class="services-gallery owl owl-carousel owl-theme pb-30">
 					[[+services-gallery]]
 				</div>
@@ -197,38 +195,41 @@
 			[[Wayfinder? &startId=`[[*id]]` &level=`1` &outerClass=`` &hereClass=`active` &scheme=`abs` &ph=`services-typess`]] 
 			[[+services-typess:isnotempty=`
 			<div class="services-types" id="services-types">
-				<h2>Виды [[*services-title-rp]]</h2> 
+				<h2>[[++cultureKey:is=`ru`:then=`Виды [[*services-title-rp]]`]][[++cultureKey:is=`en`:then=`Types`]][[++cultureKey:is=`uz`:then=`ТУРЛАРИ`]]</h2>
 				[[+services-typess]]
 			</div>
 			`]] [[*services-price:isnotempty=`
 			<div class="services-price" id="services-price">
-				<h2>Цена на [[*services-title-vp]]</h2> 
+				<h2>[[++cultureKey:is=`ru`:then=`Цена на [[*services-title-vp]]`]][[++cultureKey:is=`en`:then=`Price`]][[++cultureKey:is=`uz`:then=`НАРХЛАРИ`]]</h2> 
 				[[*services-price]]
 			</div>
 			`]] 
 			[[*services-testimony:isnotempty=`
 			<div class="services-testimony" id="services-testimony">
-				<h2>Показания к [[*services-title-dp]]</h2> [[*services-testimony]]
+				<h2>[[++cultureKey:is=`ru`:then=`Показания к [[*services-title-dp]]`]][[++cultureKey:is=`en`:then=`Indications `]][[++cultureKey:is=`uz`:then=`КЎРСАТМАЛАР`]]</h2> [[*services-testimony]]
 			</div>
 			`]] 
 			[[*services-types:isnotempty=`
 			<div class="services-types-second" id="services-types-second">
-				<h2>Виды [[*services-title-rp]]</h2> [[*services-types]]
+				<h2>[[++cultureKey:is=`ru`:then=`Виды [[*services-title-rp]]`]][[++cultureKey:is=`en`:then=`Types`]][[++cultureKey:is=`uz`:then=`ТУРЛАРИ`]]</h2>
+				[[*services-types]]
 			</div>
 			`]] 
 			[[*services-preparation:isnotempty=`
 			<div class="services-preparation" id="services-preparation">
-				<h2>Подготовка к [[*services-title-dp]]</h2> [[*services-preparation]]
+				<h2>[[++cultureKey:is=`ru`:then=`Подготовка к [[*services-title-dp]]`]][[++cultureKey:is=`en`:then=`Preparation`]][[++cultureKey:is=`uz`:then=`ТАЙЁРГАРЛИК`]]</h2> [[*services-preparation]]
 			</div>
 			`]] 
 			[[*services-contraindications:isnotempty=`
 			<div class="services-contraindications" id="services-contraindications">
-				<h2>Противопоказания к [[*services-title-dp]]</h2> [[*services-contraindications]]
+				<h2>[[++cultureKey:is=`ru`:then=`Противопоказания к [[*services-title-dp]]`]][[++cultureKey:is=`en`:then=`Contraindications `]][[++cultureKey:is=`uz`:then=`ҚАРШИ КЎРСАТМАЛАР `]]</h2> 
+				[[*services-contraindications]]
 			</div>
 			`]] 
 			[[*services-after:isnotempty=`
 			<div class="services-after" id="services-after">
-				<h2>После [[*services-title-rp]]</h2> [[*services-after]]
+				<h2>[[++cultureKey:is=`ru`:then=`После [[*services-title-rp]]`]][[++cultureKey:is=`en`:then=`After`]][[++cultureKey:is=`uz`:then=`СЎНГ`]] </h2> 
+				[[*services-after]]
 			</div>
 			`]] 
 		
@@ -239,13 +240,13 @@
 					[[getResources? &tpl=`doctors-carousel` &limit=`6` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[++cultureKey:is=`ru`:then=`8`]][[++cultureKey:is=`en`:then=`364`]][[++cultureKey:is=`uz`:then=`511`]]` &tvFilters=`doctors-category==[[*doctors-category]]` &sortby=`menuindex` &sortdir=`ASC` &toPlaceholder=`services-doctors` ]] [[+services-doctors]]
 				</div>
 				<div class="morebtn-mainpage text-center">
-					<a href="[[~[[++cultureKey:is=`ru`:then=`8`]][[++cultureKey:is=`en`:then=`364`]][[++cultureKey:is=`uz`:then=`511`]]]]" class="btn btn-default mt-30 mb-50 ">[[++cultureKey:is=`ru`:then=`Все специалисты`]][[++cultureKey:is=`en`:then=`All specialists`]][[++cultureKey:is=`uz`:then=`Перевод: Все специалисты`]]</a>
+					<a href="[[~[[++cultureKey:is=`ru`:then=`8`]][[++cultureKey:is=`en`:then=`364`]][[++cultureKey:is=`uz`:then=`511`]]]]" class="btn btn-default mt-30 mb-50 ">[[++cultureKey:is=`ru`:then=`Все специалисты`]][[++cultureKey:is=`en`:then=`All specialists`]][[++cultureKey:is=`uz`:then=`Хаммаси мутахассисларимиз`]]</a>
 				</div>
 			</div>
 			`]] 
 			[[Gallery? &album=`1` &limit=`15` &thumbTpl=`services-page-gallery` &containerTpl=`album` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000` &toPlaceholder=`services-gallery` &tag=`[[*id]]` &sort=`rank` &dir=`DESC`]] [[+services-gallery:isnotempty=`
 			<div class="service-gallery" id="services-gallery">
-				<h2 class="mb-40">Фото до и после</h2>
+				<h2 class="mb-40">[[++cultureKey:is=`ru`:then=`Фото до и после`]][[++cultureKey:is=`Before and after photos`:then=`364`]][[++cultureKey:is=`uz`:then=`Пластикадан олдин ва кейинги фотолар`]]</h2>
 				<div id="" class="services-gallery owl owl-carousel owl-theme pb-30">
 					[[+services-gallery]]
 				</div>
@@ -325,7 +326,6 @@
 				</div>
 			</section>
 			`:else=``? &id=`[[++cultureKey:is=`ru`:then=`103`]][[++cultureKey:is=`en`:then=`368`]][[++cultureKey:is=`uz`:then=`521`]]` &field=`published`]]
-
 		</div>
 	</div>
 </div>
