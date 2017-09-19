@@ -42,7 +42,7 @@
 	</article>
 </div>
 `:else=`
-<div class="container-fluid img-doctors-page" style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
+<div class="container-fluid img-doctors-page img-desktop-only" style="background: url([[*global-big-picture]]) no-repeat; background-position: center;">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 big-page-img" id="img-doctors-page">
@@ -53,9 +53,7 @@
 <div class="container content">
 	<article class="row doctors-page">
 		<div class="col-lg-12 col-sm-12 col-xs-12">
-			<h1 class="">
-				[[*pagetitle]]
-			</h1>
+			<h1>[[*pagetitle]]</h1>
 		</div>
 		[[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
 		<div id="doctors mt-20" class="col-lg-12">

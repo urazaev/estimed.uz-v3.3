@@ -5,6 +5,97 @@ body {
 }
 
 
+/*images for page*/
+
+.big-page-img {
+	height: 450px;
+	/*    background-color: #eaeaea;*/
+}
+
+.img-blank {
+	background-size: cover !important;
+	height: 400px;
+	background-position: right center !important;
+}
+
+#img-foreigners-page {}
+
+.img-foreigners-page {
+	background: url(../img/bg-foreigners.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: right center;
+	margin-bottom: 20px;
+}
+
+#img-price-page {}
+
+.img-price-page {
+	background: url(../img/bg-price.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: left center;
+	margin-bottom: 20px;
+}
+
+.img-contacts-page {
+	background: url(../img/bg-contacts.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: right center;
+	margin-bottom: 20px;
+}
+
+#img-responses-page {}
+
+.img-responses-page {
+	background: url(../img/bg-responses.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: right center;
+	margin-bottom: 20px;
+}
+
+#img-doctors-page {}
+
+.img-doctors-page {
+	background: url(../img/bg-doctors.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: center center;
+	margin-bottom: 20px;
+}
+
+#img-faq-page {}
+
+.img-faq-page {
+	background: url(../img/bg-girl1.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: left center;
+	margin-bottom: 20px;
+}
+
+.img-photos-page {
+	background: url(../img/photos-img.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: left center;
+	/*    margin-bottom: 20px;*/
+}
+
+.img-about-page {
+	background: url(../img/bg-about.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	margin-bottom: 20px;
+}
+
+.img-blank.275 {
+	background-color: #fff;
+}
+
+
 /*header styles*/
 
 a {
@@ -384,6 +475,11 @@ footer .text {
 	color: #222226;
 }
 
+@media (max-width: 768px) {
+	.content h1 {
+		font-size: 24px;
+	}
+}
 @media (min-width: 768px) {
 	.breadcrumb-container {
 		margin-top: -230px;
@@ -1097,7 +1193,7 @@ li.mainpage-link {
 	display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
 	li.mainpage-link {
 		display: block;
 	}
@@ -1180,97 +1276,6 @@ li.mainpage-link {
 
 .ico-vector {
 	margin-bottom: -6px;
-}
-
-
-/*images for page*/
-
-.big-page-img {
-	height: 450px;
-	/*    background-color: #eaeaea;*/
-}
-
-.img-blank {
-	background-size: cover !important;
-	height: 400px;
-	background-position: right center !important;
-}
-
-#img-foreigners-page {}
-
-.img-foreigners-page {
-	background: url(../img/bg-foreigners.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	background-position: right center;
-	margin-bottom: 20px;
-}
-
-#img-price-page {}
-
-.img-price-page {
-	background: url(../img/bg-price.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	background-position: left center;
-	margin-bottom: 20px;
-}
-
-.img-contacts-page {
-	background: url(../img/bg-contacts.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	background-position: right center;
-	margin-bottom: 20px;
-}
-
-#img-responses-page {}
-
-.img-responses-page {
-	background: url(../img/bg-responses.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	background-position: right center;
-	margin-bottom: 20px;
-}
-
-#img-doctors-page {}
-
-.img-doctors-page {
-	background: url(../img/bg-doctors.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	background-position: center center;
-	margin-bottom: 20px;
-}
-
-#img-faq-page {}
-
-.img-faq-page {
-	background: url(../img/bg-girl1.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	background-position: left center;
-	margin-bottom: 20px;
-}
-
-.img-photos-page {
-	background: url(../img/photos-img.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	background-position: left center;
-	/*    margin-bottom: 20px;*/
-}
-
-.img-about-page {
-	background: url(../img/bg-about.jpg) no-repeat;
-	background-size: cover;
-	height: 400px;
-	margin-bottom: 20px;
-}
-
-.img-blank.275 {
-	background-color: #fff;
 }
 
 
@@ -1896,8 +1901,67 @@ a.social-icon {
 	list-style: none;
 }
 
+@media (max-width: 1200px) {
+	.multilanguage__switcher {
+		top: 44px;
+		right: 30px;
+	}
+}
+
+@media (max-width: 991px) {
+	.multilanguage__switcher {
+		top: 1px;
+		left: 110px;
+		right: auto;
+	}
+}
+
+@media (max-width: 761px) {
+	.multilanguage__switcher {
+		top: 1px;
+		left: auto;
+		right: 70px;
+	}
+	.top-contacts .item {
+		width: 30%;
+	}
+}
+
+@media (max-width: 361px) {
+	.multilanguage__switcher {
+		top: 1px;
+		left: auto;
+		right: 130px;
+	}
+}
+
+@media (max-width: 501px) {
+	.top-contacts .item {
+		width: 40%;
+	}
+}
+
+@media (max-width: 379px) {
+	.item--tel {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 361px) {
+	.item--tel {
+		display: none !important;
+	}
+}
+
 .multilanguage__item {
 	position: relative;
+}
+
+.multilanguage__item .ru,
+.multilanguage__item .en,
+.multilanguage__item .uz {
+	min-height: 25px;
+	display: block;
 }
 
 .multilanguage__item .ru::before,
@@ -1911,6 +1975,14 @@ a.social-icon {
 	top: 5px;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+@media (max-width: 761px) {
+	.multilanguage__item .ru::after,
+	.multilanguage__item .en::after,
+	.multilanguage__item .uz::after {
+		display: none;
+	}
 }
 
 .multilanguage__item .ru::before {
@@ -1938,4 +2010,12 @@ a.social-icon {
 .multilanguage__item .en::after {
 	content: "In English";
 	padding-left: 30px;
+}
+
+.img-desktop-only {}
+
+@media (max-width: 767px) {
+	.img-desktop-only {
+		display: none;
+	}
 }
