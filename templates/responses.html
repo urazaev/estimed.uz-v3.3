@@ -13,7 +13,7 @@
 		</div>
 		[[!breadcrumb? &containerTpl=`breadcrumb-container` ]]
 		<div class="text-right">
-			<a type="submit" class="btn btn-default mt-10" href="[[~[[*id]]]]#RespForm">[[++cultureKey:is=`ru`:then=`Добавить отзыв`]][[++cultureKey:is=`en`:then=`Add testimonial`]][[++cultureKey:is=`uz`:then=`Перевод: Добавить отзыв`]]</a>
+			<a type="submit" class="btn btn-default mt-10" href="[[~[[*id]]]]#RespForm">[[++cultureKey:is=`ru`:then=`Добавить отзыв`]][[++cultureKey:is=`en`:then=`Add testimonial`]][[++cultureKey:is=`uz`:then=`Фикр қолдирмоқ`]]</a>
 		</div>
 		[[getPage? &elementClass=`modSnippet` &element=`getResources` &tpl=`@INLINE &nbsp;
 		<div class="col-md-12 response-outer">
@@ -33,33 +33,34 @@
 ` &limit=`5` &includeContent=`1` &includeTVs=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]` &sortby=`menuindex` &sortdir=`ASC` ]] 
 	[[!+page.nav:notempty=` [[!+page.nav]] `]]
 		<div class="col-lg-12 form-red">
-			<h2>[[++cultureKey:is=`ru`:then=`Отправить свой отзыв`]][[++cultureKey:is=`en`:then=`Send your testimonial`]][[++cultureKey:is=`uz`:then=`Перевод: Отправить свой отзыв`]]</h2>
+			<h2>[[++cultureKey:is=`ru`:then=`Отправить свой отзыв`]][[++cultureKey:is=`en`:then=`Send your testimonial`]][[++cultureKey:is=`uz`:then=`Фикр қолдирмоқ
+`]]</h2>
 			<form action="assets/plugins/sky-forms-pro/skyforms/resp.php" class="sky-form" method="post" id="RespForm" novalidate="novalidate">
 				<fieldset>
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group">
-								<input type="text" class="form-control" id="fformName" placeholder="[[++cultureKey:is=`ru`:then=`Имя *`]][[++cultureKey:is=`en`:then=`Your Name`]][[++cultureKey:is=`uz`:then=`Перевод: Имя *`]]" name="name">
+								<input type="text" class="form-control" id="fformName" placeholder="[[++cultureKey:is=`ru`:then=`Имя *`]][[++cultureKey:is=`en`:then=`Your Name`]][[++cultureKey:is=`uz`:then=`Исми *`]]" name="name">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="fformEmail" placeholder="[[++cultureKey:is=`ru`:then=`Е-мейл *`]][[++cultureKey:is=`en`:then=`Email`]][[++cultureKey:is=`uz`:then=`Перевод: Е-мейл *`]]" name="email">
+								<input type="text" class="form-control" id="fformEmail" placeholder="[[++cultureKey:is=`ru`:then=`Е-мейл *`]][[++cultureKey:is=`en`:then=`Email`]][[++cultureKey:is=`uz`:then=`Е-мейл *`]]" name="email">
 							</div>
 							<div class="form-group input-captcha">
 								<input type="checkbox" name="robot">&nbsp;[[++cultureKey:is=`ru`:then=` Я не робот`]][[++cultureKey:is=`en`:then=` I`m not a robot`]][[++cultureKey:is=`uz`:then=`Мен робот эмасман`]]
 							</div>
 						</div>
 						<div class="col-md-9">
-							<textarea class="form-control" id="fformMessage" placeholder="[[++cultureKey:is=`ru`:then=`Ваш отзыв *`]][[++cultureKey:is=`en`:then=`Your message`]][[++cultureKey:is=`uz`:then=`Перевод: Ваш отзыв *`]]" name="message"></textarea>
+							<textarea class="form-control" id="fformMessage" placeholder="[[++cultureKey:is=`ru`:then=`Ваш отзыв *`]][[++cultureKey:is=`en`:then=`Your message`]][[++cultureKey:is=`uz`:then=`Фикр қолдирмоқ *`]]" name="message"></textarea>
 						</div>
 					</div>
 					<div class="text-center">
-						<button type="submit" class="btn btn-default mt-40">[[++cultureKey:is=`ru`:then=`Отправить`]][[++cultureKey:is=`en`:then=`Send`]][[++cultureKey:is=`uz`:then=`Перевод: Отправить`]]</button>
+						<button type="submit" class="btn btn-default mt-40">[[++cultureKey:is=`ru`:then=`Отправить`]][[++cultureKey:is=`en`:then=`Send`]][[++cultureKey:is=`uz`:then=`Юбориш`]]</button>
 					</div>
 				</fieldset>
 
 				<div class="message">
 					<i class="rounded-x fa fa-check"></i>
-					<p>[[++cultureKey:is=`ru`:then=`Ваш отзыв успешно отправлен! Спасибо.`]][[++cultureKey:is=`en`:then=`Success! Thank you!`]][[++cultureKey:is=`uz`:then=`Перевод: Ваш отзыв успешно отправлен! Спасибо.`]]</p>
+					<p>[[++cultureKey:is=`ru`:then=`Ваш отзыв успешно отправлен! Спасибо.`]][[++cultureKey:is=`en`:then=`Success! Thank you!`]][[++cultureKey:is=`uz`:then=`Рахмат!`]]</p>
 				</div>
 		</div>
 	</article>
